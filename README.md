@@ -48,3 +48,39 @@
 </details>
 
 ---
+
+2. **What is Box Model?**
+<details>
+  <summary>Answer</summary>
+<p>The <strong>box model</strong> is a fundamental concept in web development used to describe the structure of elements in CSS. It defines how the size of an element is calculated and how its spacing works.</p>
+    <h2>Components of the Box Model</h2>
+    <ol>
+        <li>
+            <strong>Content</strong>: 
+            <p>The actual content inside the element, such as text, images, or other elements. Its size is controlled by <code>width</code> and <code>height</code>.</p>
+        </li>
+        <li>
+            <strong>Padding</strong>: 
+            <p>The space between the content and the border. Padding is transparent and can be controlled using <code>padding</code> properties (e.g., <code>padding-top</code>, <code>padding-right</code>).</p>
+        </li>
+        <li>
+            <strong>Border</strong>: 
+            <p>The edge surrounding the padding. The size and style of the border are controlled using properties like <code>border-width</code>, <code>border-style</code>, and <code>border-color</code>.</p>
+        </li>
+        <li>
+            <strong>Margin</strong>: 
+            <p>The space outside the border, creating distance between the element and other elements. It is controlled using <code>margin</code> properties (e.g., <code>margin-top</code>, <code>margin-bottom</code>).</p>
+        </li>
+    </ol>
+    <h2>Box Model Formula</h2>
+    <p>By default (<code>box-sizing: content-box</code>):</p>
+    <pre>
+Total Width = Content Width + Padding (left + right) + Border (left + right) + Margin (left + right)
+Total Height = Content Height + Padding (top + bottom) + Border (top + bottom) + Margin (top + bottom)
+    </pre>
+    <p>Alternatively, with <code>box-sizing: border-box</code>, padding and border are included in the specified width and height, simplifying size calculations.</p>
+    <p>Understanding the box model is crucial for designing layouts and managing spacing effectively in web design.</p>
+
+</details>
+
+---
