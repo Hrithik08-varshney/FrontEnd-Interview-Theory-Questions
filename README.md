@@ -84,3 +84,60 @@ Total Height = Content Height + Padding (top + bottom) + Border (top + bottom) +
 </details>
 
 ---
+
+3. **Difference between id and class? Which have high priority?**
+<details>
+  <summary>Answer</summary>
+    <h1>Difference Between <code>id</code> and <code>class</code></h1>
+    <table border="1" cellspacing="0" cellpadding="5">
+        <thead>
+            <tr>
+                <th>Aspect</th>
+                <th><code>id</code></th>
+                <th><code>class</code></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Uniqueness</td>
+                <td>Must be unique within a document.</td>
+                <td>Can be shared by multiple elements.</td>
+            </tr>
+            <tr>
+                <td>Selector</td>
+                <td>Represented as <code>#id</code>.</td>
+                <td>Represented as <code>.class</code>.</td>
+            </tr>
+            <tr>
+                <td>Purpose</td>
+                <td>Used for uniquely identifying an element.</td>
+                <td>Used for grouping multiple elements.</td>
+            </tr>
+            <tr>
+                <td>Reusability</td>
+                <td>Not reusable within the same document.</td>
+                <td>Reusable for multiple elements.</td>
+            </tr>
+            <tr>
+                <td>Specificity</td>
+                <td>Higher specificity in CSS.</td>
+                <td>Lower specificity compared to <code>id</code>.</td>
+            </tr>
+        </tbody>
+    </table>
+ <h1>CSS Priority Specificity</h1>
+    <ol>
+        <li><strong>Inline Styles:</strong> Highest priority (e.g., <code>style="color: orange;"</code>)</li>
+        <li><strong>ID Selector:</strong> Higher specificity than class or element selectors (e.g., <code>#example-id</code>)</li>
+        <li><strong>Class Selector:</strong> Lower specificity than ID but higher than element selectors (e.g., <code>.example-class</code>)</li>
+        <li><strong>Element Selector:</strong> Lowest specificity (e.g., <code>p</code>)</li>
+    </ol>
+
+    <h2>Example</h2>
+    <p id="example-id" class="example-class" style="color: orange;">
+        This text demonstrates specificity in CSS. The color is set to orange because inline styles have the highest priority.
+    </p>
+
+</details>
+
+---
