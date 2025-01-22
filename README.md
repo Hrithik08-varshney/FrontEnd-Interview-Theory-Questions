@@ -141,3 +141,52 @@ Total Height = Content Height + Padding (top + bottom) + Border (top + bottom) +
 </details>
 
 ---
+
+4. **Difference between let, var and const ?**
+<details>
+  <summary>Answer</summary>
+    <table border="1" cellpadding="10">
+  <thead>
+    <tr>
+      <th>Feature</th>
+      <th>var</th>
+      <th>let</th>
+      <th>const</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Scope</td>
+      <td>Function-scoped</td>
+      <td>Block-scoped</td>
+      <td>Block-scoped</td>
+    </tr>
+    <tr>
+      <td>Hoisting</td>
+      <td>Hoisted, initialized to <code>undefined</code></td>
+      <td>Hoisted, not initialized (throws error if accessed before declaration)</td>
+      <td>Hoisted, not initialized (throws error if accessed before declaration)</td>
+    </tr>
+    <tr>
+      <td>Re-declaration</td>
+      <td>Allowed in the same scope</td>
+      <td>Not allowed in the same scope</td>
+      <td>Not allowed in the same scope</td>
+    </tr>
+    <tr>
+      <td>Reassignment</td>
+      <td>Allowed</td>
+      <td>Allowed</td>
+      <td>Not allowed</td>
+    </tr>
+    <tr>
+      <td>Use Case</td>
+      <td>Avoid in modern JavaScript</td>
+      <td>Use for variables that may change</td>
+      <td>Use for constants that should not change</td>
+    </tr>
+  </tbody>
+</table>
+</details>
+
+---
