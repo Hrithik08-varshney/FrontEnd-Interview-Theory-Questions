@@ -190,3 +190,48 @@ Total Height = Content Height + Padding (top + bottom) + Border (top + bottom) +
 </details>
 
 ---
+
+5. **What is media query in CSS ?**
+<details>
+  <summary>Answer</summary>
+<p>
+    A <strong>media query</strong> in CSS is a technique used to apply styles conditionally based on specific device 
+    characteristics, such as screen size, resolution, orientation, or aspect ratio. Media queries allow websites to 
+    be responsive, adapting their layout and design to different devices.
+  </p>
+  <h2>Syntax</h2>
+  <pre>
+    <code>
+@media (condition) {
+  /* CSS rules */
+}
+    </code>
+  </pre>
+  <h2>Example</h2>
+  <pre>
+    <code>
+/* Styles for screens smaller than 768px */
+@media (max-width: 768px) {
+  body {
+    background-color: lightblue;
+  }
+}
+
+/* Styles for screens larger than 768px */
+@media (min-width: 769px) {
+  body {
+    background-color: lightgreen;
+  }
+}
+    </code>
+  </pre>
+  <h2>Common Use Cases</h2>
+  <ul>
+    <li>Making layouts responsive across different screen sizes.</li>
+    <li>Changing font sizes, margins, or padding based on screen width.</li>
+    <li>Adjusting images or navigation bars for mobile, tablet, or desktop views.</li>
+  </ul>
+  <p>Resize your browser window to see the background color change based on the screen size.</p>
+</details>
+
+---
