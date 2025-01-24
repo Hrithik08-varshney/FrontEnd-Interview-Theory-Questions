@@ -235,3 +235,41 @@ Total Height = Content Height + Padding (top + bottom) + Border (top + bottom) +
 </details>
 
 ---
+
+6. **Difference between margin and padding?**
+<details>
+  <summary>Answer</summary>
+ <table>
+    <thead>
+      <tr>
+        <th>Aspect</th>
+        <th>Margin</th>
+        <th>Padding</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Definition</td>
+        <td>Space outside the element, separating it from other elements.</td>
+        <td>Space inside the element, between its content and border.</td>
+      </tr>
+      <tr>
+        <td>Purpose</td>
+        <td>Creates external spacing between elements.</td>
+        <td>Creates internal spacing around the content.</td>
+      </tr>
+      <tr>
+        <td>Placement</td>
+        <td>Outside the border of the element.</td>
+        <td>Inside the border of the element.</td>
+      </tr>
+      <tr>
+        <td>Effect on Element Size</td>
+        <td>Does not increase the element's size.</td>
+        <td>Increases the element's size.</td>
+      </tr>
+    </tbody>
+  </table>
+</details>
+
+---
