@@ -273,3 +273,78 @@ Total Height = Content Height + Padding (top + bottom) + Border (top + bottom) +
 </details>
 
 ---
+
+7. **What is callback function ? What is use of it?**
+<details>
+  <summary>Answer</summary>
+ <p>
+    A <strong>callback function</strong> in JavaScript is a function that is passed as an argument to another function 
+    and is executed after some operation is completed. It allows you to execute code asynchronously or in response 
+    to certain events.
+  </p>
+
+  <h2>Example:</h2>
+  <pre>
+<code>
+function greet(name, callback) {
+    console.log(`Hello, ${name}`);
+    callback();
+}
+
+function sayGoodbye() {
+    console.log('Goodbye!');
+}
+
+greet('Alice', sayGoodbye);
+</code>
+  </pre>
+  <p><strong>Output:</strong></p>
+  <pre>
+Hello, Alice
+Goodbye!
+  </pre>
+
+  <h2>Use of Callback Functions:</h2>
+  <ul>
+    <li>
+      <strong>Asynchronous Operations:</strong>
+      <p>Used in handling tasks like API calls, file reading, or timers without blocking code execution.</p>
+      <pre>
+<code>
+setTimeout(() => {
+    console.log('This runs after 2 seconds');
+}, 2000);
+</code>
+      </pre>
+    </li>
+    <li>
+      <strong>Event Handling:</strong>
+      <p>Used in DOM event listeners.</p>
+      <pre>
+<code>
+document.getElementById('btn').addEventListener('click', () => {
+    console.log('Button clicked!');
+});
+</code>
+      </pre>
+    </li>
+    <li>
+      <strong>Control Flow:</strong>
+      <p>To maintain a sequence of operations where one function depends on another's result.</p>
+    </li>
+    <li>
+      <strong>Reusability:</strong>
+      <p>
+        You can pass different callback functions for different behaviors without modifying the core function.
+      </p>
+    </li>
+  </ul>
+
+  <h2>Modern Alternatives:</h2>
+  <p>
+    In modern JavaScript, <strong>Promises</strong> and <strong>async/await</strong> are often preferred for better 
+    readability and handling asynchronous code, but callbacks remain fundamental.
+  </p>
+</details>
+
+---
