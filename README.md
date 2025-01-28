@@ -348,3 +348,67 @@ document.getElementById('btn').addEventListener('click', () => {
 </details>
 
 ---
+
+8. **What is Promises ?**
+<details>
+  <summary>Answer</summary>
+  <p>
+    In JavaScript, <strong>promises</strong> are objects that represent the eventual completion (or failure) 
+    of an asynchronous operation and its resulting value. They help manage asynchronous tasks effectively, 
+    avoiding the "callback hell."
+  </p>
+
+  <h2>Promise States</h2>
+  <ul>
+    <li><strong>Pending:</strong> The initial state, neither fulfilled nor rejected.</li>
+    <li><strong>Fulfilled:</strong> The operation completed successfully, and a result is available.</li>
+    <li><strong>Rejected:</strong> The operation failed, and a reason (error) is available.</li>
+  </ul>
+
+  <h2>Syntax</h2>
+  <pre>
+<code>
+const promise = new Promise((resolve, reject) => {
+  // Perform an asynchronous operation
+  if (/* success condition */) {
+    resolve('Success!'); // Fulfill the promise
+  } else {
+    reject('Error!'); // Reject the promise
+  }
+});
+</code>
+  </pre>
+
+  <h2>Using Promises</h2>
+  <p>You can handle a promise's result using <code>.then()</code>, <code>.catch()</code>, and <code>.finally()</code>:</p>
+  <pre>
+<code>
+promise
+  .then((result) => {
+    console.log('Fulfilled:', result); // Handle success
+  })
+  .catch((error) => {
+    console.log('Rejected:', error); // Handle error
+  })
+  .finally(() => {
+    console.log('Done'); // Executes regardless of success or failure
+  });
+</code>
+  </pre>
+
+  <h2>Example</h2>
+  <p>Fetching data with a promise:</p>
+  <pre>
+<code>
+fetch('https://api.example.com/data')
+  .then((response) => response.json())
+  .then((data) => console.log(data))
+  .catch((error) => console.error('Error:', error));
+</code>
+  </pre>
+
+  <h2>Key Advantage</h2>
+  <p>Promises make asynchronous code easier to read and manage, especially when combined with <code>async/await</code>.</p>
+</details>
+
+---
