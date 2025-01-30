@@ -417,7 +417,6 @@ fetch('https://api.example.com/data')
 <details>
   <summary>Answer</summary>
 <p>The <strong>Event Loop</strong> is a mechanism in JavaScript that handles asynchronous operations and ensures non-blocking execution. It continuously checks the <strong>Call Stack</strong> and the <strong>Callback Queue</strong>, executing tasks accordingly.</p>
-    
     <h2>How It Works:</h2>
     <ul>
         <li><strong>Call Stack:</strong> Executes synchronous code line by line.</li>
@@ -426,27 +425,56 @@ fetch('https://api.example.com/data')
         <li><strong>Microtask Queue:</strong> Stores promises and <code>queueMicrotask()</code> callbacks (executed before the callback queue).</li>
         <li><strong>Event Loop:</strong> Moves tasks from the Microtask/Callback Queue to the Call Stack when it's empty.</li>
     </ul>
-    
     <h2>Example:</h2>
     <pre><code>console.log("Start");
-
 setTimeout(() => {
     console.log("Timeout");
 }, 0);
-
 Promise.resolve().then(() => {
     console.log("Promise");
 });
-
 console.log("End");</code></pre>
-    
     <h2>Expected Output:</h2>
     <pre><code>Start
 End
 Promise
 Timeout</code></pre>
-    
     <p>The <strong>Promise</strong> executes before <strong>setTimeout</strong> due to the Microtask Queue priority.</p>
 </details>
 
 ---
+
+10. **What is CSS Preprocessor ?**
+<details>
+  <summary>Answer</summary>
+<p>A <strong>CSS Preprocessor</strong> is a scripting language that extends CSS by adding features like variables, nested rules, mixins, functions, and more. It compiles into standard CSS that browsers can understand.</p>
+
+<h2>Popular CSS Preprocessors:</h2>
+<ul>
+    <li><strong>SASS (SCSS):</strong> Most widely used, supports variables, nesting, mixins, and functions.</li>
+    <li><strong>LESS:</strong> Similar to SASS but uses JavaScript-like syntax.</li>
+    <li><strong>Stylus:</strong> More flexible syntax with optional semicolons and brackets.</li>
+</ul>
+
+<h2>Benefits:</h2>
+<ul>
+    <li><strong>Code Reusability:</strong> Variables, mixins.</li>
+    <li><strong>Better Maintainability:</strong> Structured nesting.</li>
+    <li><strong>Improved Readability:</strong> Modular approach.</li>
+    <li><strong>Enhanced Functionality:</strong> Math operations, functions.</li>
+</ul>
+
+<h2>Example (SASS):</h2>
+<pre><code>
+// SCSS Syntax
+$primary-color: blue;
+
+button {
+  background: $primary-color;
+  color: white;
+}
+</code></pre>
+</details>
+
+---
+
