@@ -478,3 +478,11 @@ button {
 
 ---
 
+10. **Can our browser directly understand SASS code ?**
+<details>
+  <summary>Answer</summary>
+<p>No, browsers cannot directly understand SASS code. SASS (Syntactically Awesome Stylesheets) is a preprocessor that needs to be compiled into standard CSS before a browser can render it.</p>
+    <p>You must use a SASS compiler (like Dart Sass, node-sass, or a build tool like Webpack) to convert <code>.scss</code> or <code>.sass</code> files into <code>.css</code>.</p>
+</details>
+
+---
