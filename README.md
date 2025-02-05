@@ -486,3 +486,43 @@ button {
 </details>
 
 ---
+
+11. **What is AJAX ?**
+<details>
+  <summary>Answer</summary>
+<p><strong>AJAX (Asynchronous JavaScript and XML)</strong> is a technique used in web development to send and receive data from a server asynchronously without reloading the page. It allows dynamic updates of web content without refreshing the entire page.</p>
+
+    <h2>Key Aspects of AJAX:</h2>
+    <ul>
+        <li>Uses <code>XMLHttpRequest</code> or <code>fetch API</code> to communicate with the server.</li>
+        <li>Can send and receive data in formats like JSON, XML, or plain text.</li>
+        <li>Improves user experience by making web applications faster and more responsive.</li>
+    </ul>
+
+    <h2>Example (Using Fetch API in JavaScript):</h2>
+    <pre>
+        <code>
+        fetch('https://api.example.com/data')
+          .then(response => response.json())
+          .then(data => console.log(data))
+          .catch(error => console.error('Error:', error));
+        </code>
+    </pre>
+
+    <h2>Live Example:</h2>
+    <button onclick="fetchData()">Fetch Data</button>
+    <pre id="output"></pre>
+
+    <script>
+        function fetchData() {
+            fetch('https://jsonplaceholder.typicode.com/todos/1')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('output').textContent = JSON.stringify(data, null, 2);
+                })
+                .catch(error => console.error('Error:', error));
+        }
+    </script>
+</details>
+
+---
