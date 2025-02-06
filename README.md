@@ -526,3 +526,20 @@ button {
 </details>
 
 ---
+
+12. **Some git commands you used in your project?**
+<details>
+  <summary>Answer</summary>
+ <ul>
+   <li><b>git checkout -b branchname</b></li>
+   <li><b>git push</b></li>
+   <li><b>git rebase --continue</b></li>
+   <li><b>git pull origin branchname</b></li>
+   <li><b>git rebase --abort</b></li>
+   <li><b>git add .</b></li>
+   <li><b>git commit -m "commit message"</b></li>
+   <li><b>git stash</b></li>
+ </ul>
+</details>
+
+---
