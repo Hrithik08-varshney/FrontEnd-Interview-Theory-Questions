@@ -543,3 +543,51 @@ button {
 </details>
 
 ---
+
+13. **Difference between null and undefined?**
+<details>
+  <summary>Answer</summary>
+<table>
+        <tr>
+            <th>Feature</th>
+            <th><code>null</code></th>
+            <th><code>undefined</code></th>
+        </tr>
+        <tr>
+            <td><strong>Type</strong></td>
+            <td>Object</td>
+            <td>Undefined</td>
+        </tr>
+        <tr>
+            <td><strong>Meaning</strong></td>
+            <td>Intentional absence of a value</td>
+            <td>Variable declared but not assigned a value</td>
+        </tr>
+        <tr>
+            <td><strong>Usage</strong></td>
+            <td>Explicitly assigned to indicate "no value"</td>
+            <td>Default value for uninitialized variables</td>
+        </tr>
+        <tr>
+            <td><strong>Comparison</strong></td>
+            <td><code>null == undefined</code> → <code>true</code> (loose equality)</td>
+            <td><code>null === undefined</code> → <code>false</code> (strict equality)</td>
+        </tr>
+        <tr>
+            <td><strong>Typeof</strong></td>
+            <td><code>typeof null</code> → <code>"object"</code> (JS bug)</td>
+            <td><code>typeof undefined</code> → <code>"undefined"</code></td>
+        </tr>
+    </table>
+<h3>Example:</h3>
+    <pre>
+<code>
+let a = null;
+console.log(a); // null
+let b;
+console.log(b); // undefined
+</code>
+    </pre>
+</details>
+
+---
