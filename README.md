@@ -591,3 +591,28 @@ console.log(b); // undefined
 </details>
 
 ---
+
+13. **New Features in ES6?**
+<details>
+  <summary>Answer</summary>
+<ul>
+        <li><strong>let & const</strong> – Block-scoped variable declarations.</li>
+        <li><strong>Arrow Functions</strong> – Shorter syntax for functions (<code>const add = (a, b) => a + b</code>).</li>
+        <li><strong>Template Literals</strong> – String interpolation using backticks (<code>`Hello, ${name}`</code>).</li>
+        <li><strong>Default Parameters</strong> – Function parameters with default values (<code>function greet(name = "User") {}</code>).</li>
+        <li><strong>Destructuring Assignment</strong> – Extract values from arrays/objects (<code>const { name, age } = user</code>).</li>
+        <li><strong>Spread & Rest Operators</strong> – (<code>...</code> for array spreading and function arguments).</li>
+        <li><strong>Modules (import/export)</strong> – Native ES6 module support.</li>
+        <li><strong>Promises</strong> – Built-in promise handling for async operations.</li>
+        <li><strong>Classes</strong> – Syntactic sugar for prototype-based inheritance (<code>class Person {}</code>).</li>
+        <li><strong>Enhanced Object Literals</strong> – Shorter syntax for defining methods/properties.</li>
+        <li><strong>for...of Loop</strong> – Iterates over iterable objects (<code>for (const item of array) {}</code>).</li>
+        <li><strong>Map & Set</strong> – New data structures for key-value pairs and unique values.</li>
+        <li><strong>Symbols</strong> – Unique and immutable primitive data type.</li>
+        <li><strong>Generators</strong> – Functions that can pause and resume execution (<code>function* generator() {}</code>).</li>
+        <li><strong>WeakMap & WeakSet</strong> – Collection types that do not prevent garbage collection.</li>
+    </ul>
+</details>
+
+---
+
