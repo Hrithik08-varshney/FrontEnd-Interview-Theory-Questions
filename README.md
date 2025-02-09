@@ -616,3 +616,61 @@ console.log(b); // undefined
 
 ---
 
+14. **Difference between Arrow Function and Normal Function?**
+<details>
+  <summary>Answer</summary>
+<table>
+        <tr>
+            <th>Feature</th>
+            <th>Arrow Function (<code>=&gt;</code>)</th>
+            <th>Normal Function (<code>function</code>)</th>
+        </tr>
+        <tr>
+            <td><strong><code>this</code> Binding</strong></td>
+            <td>Lexically binds <code>this</code> (inherits from surrounding scope).</td>
+            <td>Dynamically binds <code>this</code> (depends on how function is called).</td>
+        </tr>
+        <tr>
+            <td><strong>Usage as Constructor</strong></td>
+            <td>❌ Cannot be used as a constructor (<code>new</code> keyword will throw an error).</td>
+            <td>✅ Can be used as a constructor (<code>new</code> keyword works).</td>
+        </tr>
+        <tr>
+            <td><strong>Arguments Object</strong></td>
+            <td>❌ Does not have its own <code>arguments</code> object.</td>
+            <td>✅ Has its own <code>arguments</code> object.</td>
+        </tr>
+        <tr>
+            <td><strong>Implicit Return</strong></td>
+            <td>✅ Can return a value implicitly (if single expression, no <code>{}</code> needed).</td>
+            <td>❌ Requires explicit <code>return</code> statement.</td>
+        </tr>
+        <tr>
+            <td><strong>Hoisting</strong></td>
+            <td>❌ Not hoisted like function declarations. Must be defined before use.</td>
+            <td>✅ Function declarations are hoisted.</td>
+        </tr>
+        <tr>
+            <td><strong>Methods in Objects</strong></td>
+            <td>❌ Not suitable as object methods (due to <code>this</code> binding issue).</td>
+            <td>✅ Works correctly as object methods.</td>
+        </tr>
+    </table>
+<h3>Example:</h3>
+    <h4>Arrow Function:</h4>
+    <pre>
+const add = (a, b) => a + b;
+console.log(add(2, 3)); // 5
+    </pre>
+    
+    <h4>Normal Function:</h4>
+    <pre>
+function add(a, b) {
+  return a + b;
+}
+console.log(add(2, 3)); // 5
+    </pre>
+</details>
+
+---
+
