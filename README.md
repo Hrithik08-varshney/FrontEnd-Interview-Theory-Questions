@@ -719,3 +719,28 @@ function sum(a, b) {
 
 ---
 
+15. **What is Closure?**
+<details>
+  <summary>Answer</summary>
+ <p>A <strong>closure</strong> in JavaScript is a function that <em>remembers</em> the variables from its <em>outer scope</em> even after the outer function has finished executing.</p>
+    <h3>Example:</h3>
+    <pre>
+        <code>
+function outerFunction(outerVariable) {
+    return function innerFunction(innerVariable) {
+        console.log(`Outer: ${outerVariable}, Inner: ${innerVariable}`);
+    };
+}
+const newFunction = outerFunction("Hello");
+newFunction("World"); // Output: Outer: Hello, Inner: World
+        </code>
+    </pre>
+    <h3>Use Cases:</h3>
+    <ul>
+        <li>Data encapsulation (private variables)</li>
+        <li>Function factories</li>
+        <li>Event handlers and callbacks</li>
+    </ul>
+</details>
+
+---
