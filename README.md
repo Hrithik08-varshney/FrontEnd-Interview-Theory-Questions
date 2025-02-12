@@ -744,3 +744,56 @@ newFunction("World"); // Output: Outer: Hello, Inner: World
 </details>
 
 ---
+
+16. **What is 'this' keyword?**
+<details>
+  <summary>Answer</summary>
+<h3>1. Global Context</h3>
+    <p>In browsers, <code>this</code> refers to the <code>window</code> object. In strict mode, it is <code>undefined</code>.</p>
+    <pre><code>console.log(this); // window (in browsers)</code></pre>
+    <h3>2. Object Method Context</h3>
+    <p><code>this</code> refers to the object that owns the method.</p>
+    <pre><code>const obj = {
+  name: "Task",
+  show() {
+    console.log(this.name);
+  }
+};
+obj.show(); // "Task"</code></pre>
+    <h3>3. Constructor Function Context</h3>
+    <p><code>this</code> refers to the newly created object.</p>
+    <pre><code>function Person(name) {
+  this.name = name;
+}
+const p = new Person("John");
+console.log(p.name); // "John"</code></pre> 
+    <h3>4. Arrow Function Context</h3>
+    <p>Arrow functions inherit <code>this</code> from their surrounding scope.</p>
+    <pre><code>const obj2 = {
+  name: "React",
+  show: () => {
+    console.log(this.name);
+  }
+};
+obj2.show(); // undefined</code></pre>
+    <h3>5. Explicit Binding (call, apply, bind)</h3>
+    <p>You can manually set <code>this</code> using <code>call</code>, <code>apply</code>, or <code>bind</code>.</p>
+    <pre><code>function greet() {
+  console.log(this.name);
+}
+const user = { name: "Dev" };
+greet.call(user); // "Dev"</code></pre>
+    <h3>6. Event Listener Context</h3>
+    <p>In event handlers, <code>this</code> refers to the element that triggered the event.</p>
+    <button id="btn">Click Me</button>
+    <pre><code>document.getElementById("btn").addEventListener("click", function () {
+  console.log(this); // refers to the clicked button
+});</code></pre>
+    <script>
+        document.getElementById("btn").addEventListener("click", function () {
+            console.log(this); // refers to button
+        });
+    </script>
+</details>
+
+---
