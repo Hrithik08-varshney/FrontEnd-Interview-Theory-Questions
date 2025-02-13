@@ -797,3 +797,29 @@ greet.call(user); // "Dev"</code></pre>
 </details>
 
 ---
+
+17. **What is React JS ?**
+<details>
+  <summary>Answer</summary>
+ <p><strong>ReactJS</strong> is a <strong>JavaScript library</strong> used for building <strong>user interfaces</strong>, mainly for <strong>single-page applications (SPAs)</strong>.</p>
+<h2>Key Features:</h2>
+    <ul>
+        <li><strong>Component-Based</strong>: UI is divided into reusable components.</li>
+        <li><strong>Virtual DOM</strong>: Efficient updates for better performance.</li>
+        <li><strong>Declarative</strong>: Simplifies UI updates by describing the desired state.</li>
+        <li><strong>JSX</strong>: Combines JavaScript and HTML-like syntax for easier development.</li>
+        <li><strong>State Management</strong>: Handles dynamic data changes efficiently.</li>
+    </ul>
+<h2>Example:</h2>
+    <pre>
+        <code>
+import React from "react";
+function App() {
+  return &lt;h1&gt;Hello, React!&lt;/h1&gt;;
+}
+export default App;
+        </code>
+    </pre>
+</details>
+
+---
