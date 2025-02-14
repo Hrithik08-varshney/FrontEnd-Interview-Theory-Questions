@@ -823,3 +823,15 @@ export default App;
 </details>
 
 ---
+
+18. **What is JSX ?**
+<details>
+  <summary>Answer</summary>
+<p><strong>JSX (JavaScript XML)</strong> is a syntax extension for JavaScript used in React. It allows you to write HTML-like code within JavaScript, making it easier to define UI components. JSX is transpiled by Babel into standard JavaScript (e.g., <code>React.createElement</code> calls).</p> 
+    <h3>Example:</h3>
+    <pre><code>const element = &lt;h1&gt;Hello, World!&lt;/h1&gt;;</code></pre> 
+    <p>JSX improves readability and maintainability but requires a build step to convert it into JavaScript.</p>
+</details>
+
+---
+
