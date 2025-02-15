@@ -835,3 +835,13 @@ export default App;
 
 ---
 
+19. **Can our browser directly understand JSX ?**
+<details>
+  <summary>Answer</summary>
+<p><strong>No</strong>, browsers cannot directly understand JSX because it is not valid JavaScript.</p>
+    <p>JSX is a syntax extension for JavaScript used in React to write UI components in a more declarative way.</p>
+    <p>Before it can run in the browser, JSX needs to be <strong>transpiled</strong> into standard JavaScript using tools like <strong>Babel</strong> or <strong>TypeScript</strong>.</p>
+    <p>This process converts JSX into <code>React.createElement()</code> calls or modern React's <strong>JSX runtime</strong> functions.</p>
+</details>
+
+---
