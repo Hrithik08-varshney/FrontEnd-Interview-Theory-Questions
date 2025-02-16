@@ -845,3 +845,19 @@ export default App;
 </details>
 
 ---
+
+20. **What is Webpacks?**
+<details>
+  <summary>Answer</summary>
+<p>Webpack is a <strong>module bundler</strong> for JavaScript applications. It takes modules with dependencies (JS, CSS, images, etc.) and bundles them into static assets for efficient loading.</p>
+    <h3>Key Features:</h3>
+    <ul>
+        <li><strong>Code Splitting:</strong> Loads only necessary code, improving performance.</li>
+        <li><strong>Loaders:</strong> Transforms files (e.g., Babel for JS, SCSS to CSS).</li>
+        <li><strong>Plugins:</strong> Enhances functionality (e.g., minification, environment variables).</li>
+        <li><strong>Tree Shaking:</strong> Removes unused code to reduce bundle size.</li>
+    </ul>
+    <p>It's commonly used in React, Vue, and other modern JS frameworks. 🚀</p>
+</details>
+
+---
