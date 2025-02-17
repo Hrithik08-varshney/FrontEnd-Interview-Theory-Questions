@@ -861,3 +861,40 @@ export default App;
 </details>
 
 ---
+
+21. **Life cycle methods in React JS?**
+<details>
+  <summary>Answer</summary>
+<h2>1. Mounting (Component Creation)</h2>
+    <p>Methods invoked when the component is first created:</p>
+    <ul>
+        <li><strong>constructor(props)</strong>: Initializes state and binds methods.</li>
+        <li><strong>static getDerivedStateFromProps(props, state)</strong>: Updates state based on props before rendering.</li>
+        <li><strong>render()</strong>: Returns JSX to render the UI.</li>
+        <li><strong>componentDidMount()</strong>: Runs after the component is mounted (useful for API calls).</li>
+    </ul>
+<h2>2. Updating (Component Re-rendering)</h2>
+    <p>Triggered when props or state change:</p>
+    <ul>
+        <li><strong>static getDerivedStateFromProps(props, state)</strong>: Updates state before re-render.</li>
+        <li><strong>shouldComponentUpdate(nextProps, nextState)</strong>: Controls whether to re-render.</li>
+        <li><strong>render()</strong>: Re-renders the UI.</li>
+        <li><strong>getSnapshotBeforeUpdate(prevProps, prevState)</strong>: Captures state before the update.</li>
+        <li><strong>componentDidUpdate(prevProps, prevState)</strong>: Runs after re-render (useful for DOM updates or API calls).</li>
+    </ul>
+<h2>3. Unmounting (Component Removal)</h2>
+    <p>Method called before removing the component:</p>
+    <ul>
+        <li><strong>componentWillUnmount()</strong>: Cleanup (e.g., remove event listeners, cancel API calls).</li>
+    </ul>
+<h2>React Hooks Alternative (For Functional Components)</h2>
+    <ul>
+        <li><strong>useEffect(() => { ... }, [])</strong> → Equivalent to <code>componentDidMount</code>.</li>
+        <li><strong>useEffect(() => { ... }, [dependencies])</strong> → Runs on state/props updates (<code>componentDidUpdate</code>).</li>
+        <li><strong>useEffect(() => { return () => { ... } }, [])</strong> → Equivalent to <code>componentWillUnmount</code>.</li>
+    </ul>
+<p>In modern React, functional components with hooks (<code>useState</code>, <code>useEffect</code>) are preferred over class components.</p>
+</body>
+</details>
+
+---
