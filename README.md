@@ -898,3 +898,48 @@ export default App;
 </details>
 
 ---
+
+22. **What is useRef?**
+<details>
+  <summary>Answer</summary>
+<p><code>useRef</code> is a React hook that creates a mutable object (<code>ref</code>) that persists across renders without causing re-renders when updated. It is commonly used for:</p>
+    <h2>1. Accessing DOM Elements</h2>
+    <pre><code>
+    function FocusInput() {
+      const inputRef = useRef(null);
+      return (
+        &lt;div&gt;
+          &lt;input ref={inputRef} /&gt;
+          &lt;button onClick={() => inputRef.current.focus()}&gt;Focus Input&lt;/button&gt;
+        &lt;/div&gt;
+      );
+    }
+    </code></pre>
+    <h2>2. Storing Mutable Values Without Re-renders</h2>
+    <pre><code>
+    function Timer() {
+      const count = useRef(0);
+      useEffect(() => {
+        setInterval(() => {
+          count.current += 1;
+          console.log(count.current); // Updates but doesn't re-render
+        }, 1000);
+      }, []);
+      return &lt;p&gt;Check console&lt;/p&gt;;
+    }
+    </code></pre>
+    <h2>3. Keeping References Between Renders</h2>
+    <pre><code>
+    function Counter() {
+      const renderCount = useRef(0);
+      useEffect(() => {
+        renderCount.current += 1;
+      });
+      return &lt;p&gt;Renders: {renderCount.current}&lt;/p&gt;;
+    }
+    </code></pre>
+    <p>It does <strong>not</strong> trigger re-renders when its value changes, unlike <code>useState</code>.</p>
+</details>
+
+---
+
