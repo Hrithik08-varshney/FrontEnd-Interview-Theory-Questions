@@ -943,3 +943,57 @@ export default App;
 
 ---
 
+23. **What is Controlled and Uncontrolled Components?**
+<details>
+  <summary>Answer</summary>
+<h2>Controlled Component</h2>
+    <p>A component where React <strong>controls the form elements</strong> via state. The component’s state dictates the input value.</p>
+    <h3>Example:</h3>
+    <code>
+function ControlledInput() {<br>
+&nbsp;&nbsp;const [text, setText] = useState("");<br><br>
+&nbsp;&nbsp;return &lt;input value={text} onChange={(e) => setText(e.target.value)} /&gt;;<br>
+}
+    </code>
+    <h3>Key Points:</h3>
+    <ul>
+        <li>✅ React manages the state.</li>
+        <li>✅ Useful for real-time validation & dynamic behavior.</li>
+        <li>❌ More re-renders, requires state management.</li>
+    </ul>
+</div>
+<div class="container">
+    <h2>Uncontrolled Component</h2>
+    <p>A component where the <strong>DOM itself manages the input state</strong> instead of React. You access the value using <code>ref</code>.</p>
+    <h3>Example:</h3>
+    <code>
+function UncontrolledInput() {<br>
+&nbsp;&nbsp;const inputRef = useRef();<br><br>
+&nbsp;&nbsp;return (<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;form onSubmit={(e) => {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e.preventDefault();<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alert(inputRef.current.value);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}}&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input ref={inputRef} /&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;button type="submit"&gt;Submit&lt;/button&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/form&gt;<br>
+&nbsp;&nbsp;);<br>
+}
+    </code>
+    <h3>Key Points:</h3>
+    <ul>
+        <li>✅ Less re-rendering, good for performance.</li>
+        <li>✅ Useful for integrating with non-React code.</li>
+        <li>❌ Harder to track and manipulate state dynamically.</li>
+    </ul>
+</div>
+<div class="container">
+    <h2>Which One to Use?</h2>
+    <ul>
+        <li>Use <strong>controlled components</strong> for forms requiring validation, live updates, or complex UI logic.</li>
+        <li>Use <strong>uncontrolled components</strong> for simple inputs, non-critical forms, or when interacting with third-party libraries.</li>
+    </ul>
+</div>
+</details>
+
+---
