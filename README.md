@@ -997,3 +997,38 @@ function UncontrolledInput() {<br>
 </details>
 
 ---
+
+24. **What is High Order Functions?**
+<details>
+  <summary>Answer</summary>
+ <p>High Order Functions (HOFs) are functions that either:</p>
+    <ul>
+        <li>Take one or more functions as arguments, or</li>
+        <li>Return a function as their result.</li>
+    </ul>
+    <p>They enable functional programming patterns like <strong>map, filter, and reduce</strong> in JavaScript.</p>
+    <h3>Examples:</h3>
+    <h4>1. Using a HOF (map):</h4>
+    <pre>
+        <code>
+const numbers = [1, 2, 3, 4];
+const squared = numbers.map(num => num * num);
+console.log(squared); // [1, 4, 9, 16]
+        </code>
+    </pre>
+    <h4>2. Returning a function:</h4>
+    <pre>
+        <code>
+function multiplier(factor) {
+    return function (num) {
+        return num * factor;
+    };
+}
+const double = multiplier(2);
+console.log(double(5)); // 10
+        </code>
+    </pre>
+    <p>HOFs help in code reusability and cleaner logic.</p>
+</details>
+
+---
