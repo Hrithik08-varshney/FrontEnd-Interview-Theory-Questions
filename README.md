@@ -1032,3 +1032,55 @@ console.log(double(5)); // 10
 </details>
 
 ---
+
+25. **What is Map, Filter and Reduce Methods?**
+<details>
+  <summary>Answer</summary>
+<h2>1. Map Method (<code>map()</code>)</h2>
+    <p>Transforms each element in an array and returns a <strong>new array</strong> with modified elements.</p>
+    <code>
+        const numbers = [1, 2, 3, 4]; <br>
+        const squared = numbers.map(num => num * num); <br>
+        console.log(squared); // [1, 4, 9, 16]
+    </code>
+    <h2>2. Filter Method (<code>filter()</code>)</h2>
+    <p>Filters elements based on a condition and returns a <strong>new array</strong> with elements that pass the condition.</p>
+    <code>
+        const numbers = [1, 2, 3, 4, 5]; <br>
+        const evenNumbers = numbers.filter(num => num % 2 === 0); <br>
+        console.log(evenNumbers); // [2, 4]
+    </code>
+    <h2>3. Reduce Method (<code>reduce()</code>)</h2>
+    <p>Reduces an array to a single value using an <strong>accumulator</strong> and <strong>current value</strong>.</p>
+    <code>
+        const numbers = [1, 2, 3, 4, 5]; <br>
+        const sum = numbers.reduce((acc, num) => acc + num, 0); <br>
+        console.log(sum); // 15
+    </code>
+    <h2>Key Differences:</h2>
+    <table>
+        <tr>
+            <th>Method</th>
+            <th>Purpose</th>
+            <th>Returns</th>
+        </tr>
+        <tr>
+            <td><code>map()</code></td>
+            <td>Transforms elements</td>
+            <td>New array</td>
+        </tr>
+        <tr>
+            <td><code>filter()</code></td>
+            <td>Filters elements</td>
+            <td>New array</td>
+        </tr>
+        <tr>
+            <td><code>reduce()</code></td>
+            <td>Reduces array to a value</td>
+            <td>Single value</td>
+        </tr>
+    </table>
+
+</details>
+
+---
