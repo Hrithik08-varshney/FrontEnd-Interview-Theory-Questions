@@ -1084,3 +1084,68 @@ console.log(double(5)); // 10
 </details>
 
 ---
+
+26. **Difference between state and props?**
+<details>
+  <summary>Answer</summary>
+<h2>State</h2>
+    <ul>
+        <li>Managed <strong>internally</strong> by the component.</li>
+        <li>Can be <strong>modified</strong> using <code>useState</code> or <code>setState</code> in class components.</li>
+        <li>Used for <strong>dynamic data</strong> that changes over time (e.g., user input, UI updates).</li>
+    </ul>
+    <h3>Example:</h3>
+    <code>
+        function Counter() {<br>
+        &nbsp;&nbsp;const [count, setCount] = useState(0);<br>
+        &nbsp;&nbsp;return &lt;button onClick={() => setCount(count + 1)}&gt;Count: {count}&lt;/button&gt;;<br>
+        }
+    </code>
+    <h2>Props</h2>
+    <ul>
+        <li>Passed <strong>externally</strong> from a parent component.</li>
+        <li><strong>Immutable</strong> (cannot be modified inside the component).</li>
+        <li>Used to <strong>pass data</strong> and event handlers to child components.</li>
+    </ul>
+    <h3>Example:</h3>
+    <code>
+        function Greeting({ name }) {<br>
+        &nbsp;&nbsp;return &lt;h1&gt;Hello, {name}!&lt;/h1&gt;;<br>
+        }<br><br>
+        function App() {<br>
+        &nbsp;&nbsp;return &lt;Greeting name="John" /&gt;;<br>
+        }
+    </code>
+    <h2>Key Differences</h2>
+    <table>
+        <tr>
+            <th>Feature</th>
+            <th>State</th>
+            <th>Props</th>
+        </tr>
+        <tr>
+            <td><strong>Mutability</strong></td>
+            <td>Mutable</td>
+            <td>Immutable</td>
+        </tr>
+        <tr>
+            <td><strong>Scope</strong></td>
+            <td>Local to component</td>
+            <td>Passed from parent</td>
+        </tr>
+        <tr>
+            <td><strong>Usage</strong></td>
+            <td>Stores component data</td>
+            <td>Passes data to child</td>
+        </tr>
+        <tr>
+            <td><strong>Changes</strong></td>
+            <td>Updated via <code>setState</code></td>
+            <td>Cannot be changed by child</td>
+        </tr>
+    </table>
+    <p>In short, <strong>state</strong> is for managing component-specific data, while <strong>props</strong> are for passing data between components. 🚀</p>
+
+</details>
+
+---
