@@ -1150,48 +1150,23 @@ console.log(double(5)); // 10
 
 ---
 
-27. **What is Router in React?**
+28. **What is Server Side Rendering?**
 <details>
   <summary>Answer</summary>
-<p>In React, a <strong>router</strong> is a library that manages navigation and URL-based rendering in a single-page application (SPA). The most commonly used router in React is <strong>React Router</strong>.</p>
-    <h2>Key Features:</h2>
+<p><strong>Server-Side Rendering (SSR)</strong> is a technique where a webpage is rendered on the server instead of the client’s browser. The server processes the request, generates the full HTML page, and sends it to the client. This improves performance, SEO, and initial load time.</p>
+    <h2>Benefits of SSR:</h2>
     <ul>
-        <li><strong>Declarative Routing:</strong> Define routes using components like <code>&lt;Route&gt;</code> and <code>&lt;Routes&gt;</code>.</li>
-        <li><strong>Dynamic Routing:</strong> Supports URL parameters (e.g., <code>/user/:id</code>).</li>
-        <li><strong>Nested Routes:</strong> Allows structuring routes hierarchically.</li>
-        <li><strong>Navigation:</strong> Provides components like <code>&lt;Link&gt;</code> and <code>useNavigate()</code> for navigation without full page reloads.</li>
-        <li><strong>History Management:</strong> Uses <code>useHistory()</code> (React Router v5) or <code>useNavigate()</code> (v6) to programmatically change routes.</li>
+        <li><strong>Faster First Contentful Paint (FCP)</strong>: Users see content sooner.</li>
+        <li><strong>Better SEO</strong>: Search engines can index pre-rendered HTML.</li>
+        <li><strong>Improved Performance</strong>: Reduces the workload on the client.</li>
     </ul>
-    <h2>Installation:</h2>
-    <pre>
-npm install react-router-dom
-    </pre>
-    <h2>Basic Example:</h2>
-    <pre>
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-function Home() {
-  return &lt;h2&gt;Home Page&lt;/h2&gt;;
-}
-function About() {
-  return &lt;h2&gt;About Page&lt;/h2&gt;;
-}
-export default function App() {
-  return (
-    &lt;Router&gt;
-      &lt;nav&gt;
-        &lt;Link to="/"&gt;Home&lt;/Link&gt;
-        &lt;Link to="/about"&gt;About&lt;/Link&gt;
-      &lt;/nav&gt;
-      &lt;Routes&gt;
-        &lt;Route path="/" element={&lt;Home /&gt;} /&gt;
-        &lt;Route path="/about" element={&lt;About /&gt;} /&gt;
-      &lt;/Routes&gt;
-    &lt;/Router&gt;
-  );
-}
-    </pre>
-    <p>This setup enables seamless navigation without reloading the page.</p>
-
+    <h2>Downsides:</h2>
+    <ul>
+        <li><strong>Increased Server Load</strong>: The server processes each request.</li>
+        <li><strong>Slower Time-to-Interactive</strong>: Since JS needs to hydrate the app after rendering.</li>
+    </ul>
+    <h2>SSR in React:</h2>
+    <p>Next.js makes SSR easy with <code>getServerSideProps</code> for fetching data at request time.</p>
 </details>
 
 ---
