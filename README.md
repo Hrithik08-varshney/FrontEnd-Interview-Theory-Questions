@@ -1171,3 +1171,37 @@ console.log(double(5)); // 10
 
 ---
 
+29. **How to optimise performance of web application?**
+<details>
+  <summary>Answer</summary>
+ <h2>Frontend Optimization</h2>
+    <ul>
+        <li><strong>Code Splitting & Lazy Loading:</strong> Use React’s <code>React.lazy</code> and <code>Suspense</code> to load components only when needed.</li>
+        <li><strong>Reduce Bundle Size:</strong> Use Webpack’s <code>Tree Shaking</code>, remove unused libraries, and enable gzip/Brotli compression.</li>
+        <li><strong>Optimize Images:</strong> Use WebP format, lazy loading (<code>loading="lazy"</code>), and responsive images (<code>srcset</code>).</li>
+        <li><strong>Minify & Compress Assets:</strong> Use tools like Terser, UglifyJS, and CSS minification to reduce file sizes.</li>
+        <li><strong>Use a CDN:</strong> Deliver static assets via CDN for faster global access.</li>
+        <li><strong>Efficient State Management:</strong> Use React Context or lightweight libraries like Zustand over Redux where applicable.</li>
+        <li><strong>Avoid Unnecessary Re-renders:</strong> Use <code>React.memo</code>, <code>useCallback</code>, and <code>useMemo</code> to optimize rendering.</li>
+    </ul>
+    <h2>Backend Optimization</h2>
+    <ul>
+        <li><strong>Use Efficient Database Queries:</strong> Optimize indexes, avoid N+1 queries, and use caching (Redis, Memcached).</li>
+        <li><strong>Enable HTTP Caching:</strong> Use <code>Cache-Control</code>, <code>ETag</code>, and <code>Expires</code> headers to reduce redundant requests.</li>
+        <li><strong>Optimize API Responses:</strong> Compress JSON responses and paginate large datasets.</li>
+        <li><strong>Use Load Balancing:</strong> Distribute traffic across multiple servers to handle higher loads.</li>
+    </ul>
+    <h2>Network Optimization</h2>
+    <ul>
+        <li><strong>Reduce HTTP Requests:</strong> Combine CSS/JS files and use HTTP/2 or HTTP/3 for multiplexing.</li>
+        <li><strong>Use WebSockets for Real-Time Data:</strong> Avoid frequent API polling by implementing WebSockets.</li>
+        <li><strong>Prefetch & Preload:</strong> Use <code>rel="preload"</code> and <code>rel="prefetch"</code> for faster navigation.</li>
+    </ul>
+    <h2>Monitoring & Profiling</h2>
+    <ul>
+        <li><strong>Use Lighthouse & Web Vitals:</strong> Regularly check performance metrics.</li>
+        <li><strong>Monitor with APM Tools:</strong> Use New Relic, Datadog, or Google Analytics for real-time insights.</li>
+    </ul>
+</details>
+
+---
