@@ -1205,3 +1205,28 @@ console.log(double(5)); // 10
 </details>
 
 ---
+
+30. **What is FlexBox?**
+<details>
+  <summary>Answer</summary>
+<p>Flexbox (Flexible Box Layout) is a CSS layout model designed for efficient arrangement, alignment, and distribution of elements inside a container, even when their sizes are dynamic. It is particularly useful for creating responsive designs.</p>
+    <h2>Key Features:</h2>
+    <ul>
+        <li><strong>Main Axis & Cross Axis:</strong> Items are laid out along a main axis (<code>row</code> or <code>column</code>), with a cross axis perpendicular to it.</li>
+        <li><strong>Flexible Sizing:</strong> Elements can grow, shrink, or stay fixed as needed.</li>
+        <li><strong>Alignment & Distribution:</strong> Easy centering, spacing, and alignment using properties like <code>justify-content</code> (main axis) and <code>align-items</code> (cross axis).</li>
+        <li><strong>Reordering:</strong> Items can be reordered without changing the HTML structure (<code>order</code> property).</li>
+    </ul>
+    <h2>Basic Properties:</h2>
+    <h3>For the flex container:</h3>
+    <div class="container">
+        <div class="code">display: flex;</div>
+        <div class="code">flex-direction: row | column;</div>
+        <div class="code">justify-content: flex-start | center | space-between;</div>
+        <div class="code">align-items: flex-start | center | stretch;</div>
+        <div class="code">flex-wrap: nowrap | wrap;</div>
+    </div>
+</details>
+
+---
+
