@@ -1230,3 +1230,48 @@ console.log(double(5)); // 10
 
 ---
 
+31. **What is the difference between Virtual and Real DOM?**
+<details>
+  <summary>Answer</summary>
+<table>
+        <tr>
+            <th>Feature</th>
+            <th>Virtual DOM</th>
+            <th>Real DOM</th>
+        </tr>
+        <tr>
+            <td><strong>Definition</strong></td>
+            <td>A lightweight copy of the Real DOM that updates efficiently.</td>
+            <td>The actual structure of HTML elements in the browser.</td>
+        </tr>
+        <tr>
+            <td><strong>Update Speed</strong></td>
+            <td>Faster updates due to diffing and batching.</td>
+            <td>Slower updates as it re-renders the entire affected tree.</td>
+        </tr>
+        <tr>
+            <td><strong>Re-rendering</strong></td>
+            <td>Only updates the changed parts (diffing algorithm).</td>
+            <td>Updates the entire UI, even for small changes.</td>
+        </tr>
+        <tr>
+            <td><strong>Performance</strong></td>
+            <td>More efficient and optimized.</td>
+            <td>Less efficient due to direct manipulation.</td>
+        </tr>
+        <tr>
+            <td><strong>Usage</strong></td>
+            <td>Used in frameworks like React for better UI updates.</td>
+            <td>Used natively by browsers.</td>
+        </tr>
+    </table>
+    <h3>How Virtual DOM Works in React?</h3>
+    <ul>
+        <li>A copy of the Real DOM is created (Virtual DOM).</li>
+        <li>When the state changes, a new Virtual DOM is generated.</li>
+        <li>React compares the new Virtual DOM with the previous one (diffing).</li>
+        <li>Only the changed elements are updated in the Real DOM (reconciliation).</li>
+    </ul>
+</details>
+
+---
