@@ -1275,3 +1275,28 @@ console.log(double(5)); // 10
 </details>
 
 ---
+
+32. **What is Function Currying?**
+<details>
+  <summary>Answer</summary>
+<p><strong>Function currying</strong> is a technique in functional programming where a function is transformed into a sequence of functions, each taking a single argument. Instead of calling a function with multiple arguments at once, you call a series of functions, each taking one argument and returning another function until all arguments are provided.</p>   
+    <h2>Example in JavaScript:</h2>
+    <code>
+        function curryFunction(a) {<br>
+        &nbsp;&nbsp;return function (b) {<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;return function (c) {<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return a + b + c;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;};<br>
+        &nbsp;&nbsp;};<br>
+        }<br><br>
+        console.log(curryFunction(1)(2)(3)); // Output: 6
+    </code>
+    <h2>Why Use Currying?</h2>
+    <ul>
+        <li><strong>Reusability:</strong> You can create specialized functions by passing only some arguments.</li>
+        <li><strong>Code Readability:</strong> Helps break down complex functions into smaller, manageable ones.</li>
+        <li><strong>Functional Programming:</strong> Encourages immutability and pure functions.</li>
+    </ul>
+</details>
+
+---
