@@ -1300,3 +1300,27 @@ console.log(double(5)); // 10
 </details>
 
 ---
+
+33. **What is Redux?**
+<details>
+  <summary>Answer</summary>
+ <p>Redux is a state management library for JavaScript applications, commonly used with React. It helps manage application state in a predictable way using a single global store.</p>
+    <h2>Key Concepts:</h2>
+    <ul>
+        <li><strong>Store:</strong> Centralized state container.</li>
+        <li><strong>Actions:</strong> Objects describing state changes.</li>
+        <li><strong>Reducers:</strong> Pure functions that update the state based on actions.</li>
+        <li><strong>Dispatch:</strong> Method to send actions to the store.</li>
+        <li><strong>Selectors:</strong> Functions to extract specific data from the store.</li>
+    </ul>
+    <h2>Why Use Redux?</h2>
+    <ul>
+        <li>Centralized state management.</li>
+        <li>Predictable state updates.</li>
+        <li>Easier debugging with time-travel debugging.</li>
+        <li>Works well for complex applications with shared state.</li>
+    </ul>
+    <p>For smaller projects, React's built-in state (<code>useState</code>, <code>useReducer</code>, <code>Context API</code>) may be enough.</p>
+</details>
+
+---
