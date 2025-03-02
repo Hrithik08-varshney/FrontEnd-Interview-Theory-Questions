@@ -1324,3 +1324,62 @@ console.log(double(5)); // 10
 </details>
 
 ---
+
+34. **Difference between Call, Apply and Bind?**
+<details>
+  <summary>Answer</summary>
+ <p>All three methods are used to invoke a function with a specified <code>this</code> value, but they differ in how they handle arguments.</p>
+    <table>
+        <tr>
+            <th>Method</th>
+            <th>Execution</th>
+            <th>Arguments Passing</th>
+            <th>Returns</th>
+        </tr>
+        <tr>
+            <td><code>call()</code></td>
+            <td>Invokes the function immediately</td>
+            <td>Arguments are passed individually</td>
+            <td>Function’s result</td>
+        </tr>
+        <tr>
+            <td><code>apply()</code></td>
+            <td>Invokes the function immediately</td>
+            <td>Arguments are passed as an array</td>
+            <td>Function’s result</td>
+        </tr>
+        <tr>
+            <td><code>bind()</code></td>
+            <td>Returns a new function (does NOT execute immediately)</td>
+            <td>Arguments are passed individually</td>
+            <td>New function with bound <code>this</code></td>
+        </tr>
+    </table>
+    <h2>Examples</h2>
+    <h3>1. <code>call()</code></h3>
+    <pre><code>
+function greet(city) {
+    console.log(`Hello, my name is ${this.name} and I'm from ${city}`);
+}
+const person = { name: "John" };
+greet.call(person, "New York"); // "Hello, my name is John and I'm from New York"
+    </code></pre>
+    <h3>2. <code>apply()</code></h3>
+    <pre><code>
+greet.apply(person, ["Los Angeles"]); // "Hello, my name is John and I'm from Los Angeles"
+    </code></pre>
+    <h3>3. <code>bind()</code></h3>
+    <pre><code>
+const boundGreet = greet.bind(person, "Chicago");
+boundGreet(); // "Hello, my name is John and I'm from Chicago"
+    </code></pre>
+    <h2>Key Takeaways</h2>
+    <ul>
+        <li>Use <code>call()</code> when you know the arguments in advance.</li>
+        <li>Use <code>apply()</code> when arguments are in an array.</li>
+        <li>Use <code>bind()</code> when you want to create a function with a fixed <code>this</code> value for later execution.</li>
+    </ul>
+</details>
+
+---
+
