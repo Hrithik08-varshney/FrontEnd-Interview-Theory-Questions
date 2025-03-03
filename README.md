@@ -1383,3 +1383,45 @@ boundGreet(); // "Hello, my name is John and I'm from Chicago"
 
 ---
 
+35. **What is Debouncing?**
+<details>
+  <summary>Answer</summary>
+  <p>Debouncing is a programming technique used to limit the number of times a function executes, especially in response to events like keystrokes, clicks, or window resizing. It ensures that the function runs only after a specified delay has passed since the last event trigger.</p>
+    <h3>Example (JavaScript):</h3>
+    <pre>
+<code>
+function debounce(func, delay) {
+    let timer;
+    return function (...args) {
+        clearTimeout(timer);
+        timer = setTimeout(() => func.apply(this, args), delay);
+    };
+}
+// Usage: Debounced search input
+const searchInput = document.getElementById("search");
+searchInput.addEventListener("input", debounce((e) => {
+    console.log("Searching for:", e.target.value);
+}, 300));
+</code>
+    </pre>
+    <h3>Live Demo:</h3>
+  <pre>
+    <input type="text" id="search" placeholder="Type to search...">
+    <script>
+        function debounce(func, delay) {
+            let timer;
+            return function (...args) {
+                clearTimeout(timer);
+                timer = setTimeout(() => func.apply(this, args), delay);
+            };
+        }
+        // Debounced input example
+        const searchInput = document.getElementById("search");
+        searchInput.addEventListener("input", debounce((e) => {
+            console.log("Searching for:", e.target.value);
+        }, 300));
+    </script>
+  </pre>
+</details>
+
+---
