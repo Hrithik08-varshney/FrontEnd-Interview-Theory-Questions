@@ -1425,3 +1425,44 @@ searchInput.addEventListener("input", debounce((e) => {
 </details>
 
 ---
+
+36. **What is Shallow and Deep Copy?**
+<details>
+  <summary>Answer</summary>
+<h1>Shallow Copy vs Deep Copy</h1>
+    <h2>1. Shallow Copy</h2>
+    <ul>
+        <li>Copies only the reference of nested objects, not the actual objects themselves.</li>
+        <li>If the original object is modified, the changes reflect in the copied object as well (for nested objects).</li>
+        <li>In JavaScript, you can create a shallow copy using:</li>
+        <ul>
+            <li><code>Object.assign({}, obj)</code></li>
+            <li>Spread operator: <code>{ ...obj }</code></li>
+            <li><code>Array.prototype.slice()</code> or <code>Array.prototype.concat()</code> for arrays</li>
+        </ul>
+    </ul>
+    <h2>2. Deep Copy</h2>
+    <ul>
+        <li>Creates a completely independent copy, including nested objects.</li>
+        <li>Changes in the original object do not affect the copied object.</li>
+        <li>In JavaScript, deep copies can be made using:</li>
+        <ul>
+            <li><code>JSON.parse(JSON.stringify(obj))</code> (loses functions & special objects like Date, Map)</li>
+            <li><strong>Lodash:</strong> <code>_.cloneDeep(obj)</code></li>
+            <li>Manually using recursion for complex structures</li>
+        </ul>
+    </ul>
+    <h2>Example in JavaScript</h2>
+    <pre>
+let obj1 = { a: 1, b: { c: 2 } };
+let shallowCopy = { ...obj1 }; // Shallow copy
+shallowCopy.b.c = 42;
+console.log(obj1.b.c); // 42 (Changes reflected in the original)
+let deepCopy = JSON.parse(JSON.stringify(obj1)); // Deep copy
+deepCopy.b.c = 99;
+console.log(obj1.b.c); // Still 42 (No changes in the original)
+    </pre>
+</details>
+
+---
+
