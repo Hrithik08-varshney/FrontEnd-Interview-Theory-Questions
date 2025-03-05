@@ -1466,3 +1466,52 @@ console.log(obj1.b.c); // Still 42 (No changes in the original)
 
 ---
 
+37. **What is Throttling?**
+<details>
+  <summary>Answer</summary>
+    <p>Throttling is a technique used in JavaScript to limit the execution of a function to a fixed interval. This is useful for optimizing performance in events like scrolling, resizing, or keypresses.</p>
+    <h2>Example: Throttling with <code>setTimeout</code></h2>
+    <pre class="code">
+function throttle(func, limit) {
+    let inThrottle;
+    return function() {
+        const args = arguments;
+        const context = this;
+        if (!inThrottle) {
+            func.apply(context, args);
+            inThrottle = true;
+            setTimeout(() => (inThrottle = false), limit);
+        }
+    };
+}
+    </pre>
+    <h2>Usage Example</h2>
+    <p>The example below demonstrates throttling on a scroll event. The text updates only once per second while scrolling.</p>
+    <p id="status">Waiting for scroll...</p>
+    <div class="scroll-box">
+        <h2>Scroll down to see throttling in action</h2>
+    </div>
+    <pre>
+    <script>
+        function throttle(func, limit) {
+            let inThrottle;
+            return function() {
+                const args = arguments;
+                const context = this;
+                if (!inThrottle) {
+                    func.apply(context, args);
+                    inThrottle = true;
+                    setTimeout(() => (inThrottle = false), limit);
+                }
+            };
+        }
+        const updateStatus = () => {
+            document.getElementById("status").textContent = "Scroll event triggered at " + new Date().toLocaleTimeString();
+        };
+        window.addEventListener("scroll", throttle(updateStatus, 1000));
+    </script>
+    </pre>
+</details>
+
+---
+
