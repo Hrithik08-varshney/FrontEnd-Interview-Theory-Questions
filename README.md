@@ -1515,3 +1515,41 @@ function throttle(func, limit) {
 
 ---
 
+38. **Difference between position Fixed and Absolute?**
+<details>
+  <summary>Answer</summary>
+      <table>
+        <tr>
+            <th>Feature</th>
+            <th>position: absolute</th>
+            <th>position: fixed</th>
+        </tr>
+        <tr>
+            <td><strong>Reference</strong></td>
+            <td>Nearest positioned (non-static) ancestor or <code>&lt;html&gt;</code> if none</td>
+            <td>Viewport (browser window)</td>
+        </tr>
+        <tr>
+            <td><strong>Scrolling</strong></td>
+            <td>Moves with page scroll</td>
+            <td>Stays fixed, does not move with scroll</td>
+        </tr>
+        <tr>
+            <td><strong>Parent Dependence</strong></td>
+            <td>Positioned inside a specific container if an ancestor is positioned</td>
+            <td>Independent of any container</td>
+        </tr>
+        <tr>
+            <td><strong>Common Use Cases</strong></td>
+            <td>Tooltips, dropdowns, overlays inside a container</td>
+            <td>Sticky headers, floating buttons, fixed navbars</td>
+        </tr>
+        <tr>
+            <td><strong>Example CSS</strong></td>
+            <td><code>position: absolute; top: 20px; left: 20px;</code></td>
+            <td><code>position: fixed; top: 20px; left: 20px;</code></td>
+        </tr>
+    </table>
+</details>
+
+---
