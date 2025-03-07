@@ -1553,3 +1553,32 @@ function throttle(func, limit) {
 </details>
 
 ---
+
+39. **Difference between inline and block element?**
+<details>
+  <summary>Answer</summary>
+   <h2>Block Elements</h2>
+    <ul>
+        <li>Take up the full width available (span the entire width of their parent container).</li>
+        <li>Always start on a new line.</li>
+        <li>Can contain both block and inline elements.</li>
+        <li>Examples: <code>&lt;div&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code>, 
+            <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;ul&gt;</code>, <code>&lt;li&gt;</code>.
+        </li>
+    </ul>
+    <h2>Inline Elements</h2>
+    <ul>
+        <li>Take up only as much width as necessary.</li>
+        <li>Do not start on a new line; they appear alongside other elements.</li>
+        <li>Cannot contain block elements.</li>
+        <li>Examples: <code>&lt;span&gt;</code>, <code>&lt;a&gt;</code>, <code>&lt;strong&gt;</code>, <code>&lt;em&gt;</code>, <code>&lt;img&gt;</code>, <code>&lt;label&gt;</code>, <code>&lt;b&gt;</code>, <code>&lt;i&gt;</code>.
+        </li>
+    </ul>
+    <h2>Example:</h2>
+    <p>This is a block element:</p>
+    <div style="border: 1px solid black; padding: 10px;">Block Element (div)</div>
+    <p>This is an inline element inside a block element:</p>
+    <p>Text with a <span style="color: red; border: 1px solid red; padding: 2px;">inline span</span> inside.</p>
+</details>
+
+---
