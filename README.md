@@ -1582,3 +1582,40 @@ function throttle(func, limit) {
 </details>
 
 ---
+
+40. **Difference between if and terneray?**
+<details>
+  <summary>Answer</summary>
+  <h2>1. <code>if</code> Statement</h2>
+    <ul>
+        <li>Used for multi-line conditional logic.</li>
+        <li>Can execute multiple statements.</li>
+        <li>More readable for complex conditions.</li>
+    </ul>
+    <pre>
+let num = 10;
+if (num > 0) {
+    console.log("Positive");
+} else {
+    console.log("Non-positive");
+}
+    </pre>  
+    <h2>2. Ternary Operator (<code>? :</code>)</h2>
+    <ul>
+        <li>A compact, single-line alternative to <code>if-else</code>.</li>
+        <li>Returns a value (expression-based).</li>
+        <li>Best for simple conditions.</li>
+    </ul>
+    <pre>
+let num = 10;
+let result = num > 0 ? "Positive" : "Non-positive";
+console.log(result);
+    </pre> 
+    <h2>3. When to Use?</h2>
+    <ul>
+        <li>Use <code>if</code> for complex logic.</li>
+        <li>Use the ternary operator for simple, concise conditions.</li>
+    </ul>
+</details>
+
+---
