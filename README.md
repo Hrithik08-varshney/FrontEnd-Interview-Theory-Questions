@@ -1583,7 +1583,7 @@ function throttle(func, limit) {
 
 ---
 
-40. **Difference between if and terneray?**
+40. **Difference between if and ternary?**
 <details>
   <summary>Answer</summary>
   <h2>1. <code>if</code> Statement</h2>
