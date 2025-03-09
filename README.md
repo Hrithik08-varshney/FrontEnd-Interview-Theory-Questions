@@ -1619,3 +1619,14 @@ console.log(result);
 </details>
 
 ---
+
+41. **Why we add DOCTYPE in HTML?**
+<details>
+  <summary>Answer</summary>
+ <p><code>&lt;!DOCTYPE html&gt;</code> is used in HTML to declare the document type and version of HTML being used.</p>
+    <p>It ensures that the browser renders the page in <strong>standards mode</strong> instead of <strong>quirks mode</strong>. This helps maintain consistent rendering across different browsers.</p>
+    <p>For modern web development, <code>&lt;!DOCTYPE html&gt;</code> is used for <strong>HTML5</strong>.</p>
+</body>
+</details>
+
+---
