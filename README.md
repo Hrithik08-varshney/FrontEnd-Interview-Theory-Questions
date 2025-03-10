@@ -1630,3 +1630,26 @@ console.log(result);
 </details>
 
 ---
+
+42. **What is the purpose of Head Tag in html?**
+<details>
+  <summary>Answer</summary>
+ <p>
+        The <code>&lt;head&gt;</code> tag in HTML contains metadata and links to external resources 
+        that are essential for the webpage but are not displayed directly to users. It typically includes:
+    </p>
+    <ul>
+        <li><strong>&lt;title&gt;</strong> – Sets the page title (shown in the browser tab).</li>
+        <li><strong>&lt;meta&gt;</strong> – Defines metadata like character encoding, viewport settings, and SEO descriptions.</li>
+        <li><strong>&lt;link&gt;</strong> – Links external stylesheets (CSS).</li>
+        <li><strong>&lt;script&gt;</strong> – Includes JavaScript files or inline scripts.</li>
+        <li><strong>&lt;style&gt;</strong> – Contains internal CSS.</li>
+        <li><strong>&lt;base&gt;</strong> – Sets the base URL for relative links.</li>
+    </ul>
+    <p>
+        These elements help structure, style, and enhance the functionality of the webpage.
+    </p>
+</body>
+</details>
+
+---
