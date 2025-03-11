@@ -1653,3 +1653,44 @@ console.log(result);
 </details>
 
 ---
+
+43. **What is the use of deffer keyword in script tag?**
+<details>
+  <summary>Answer</summary>
+<h1>Understanding the defer Attribute in &lt;script&gt; Tag</h1>
+    <h2>Key Benefits:</h2>
+    <ul>
+        <li><strong>Non-blocking Execution:</strong> The script is downloaded in the background while the HTML continues parsing.</li>
+        <li><strong>Maintains Execution Order:</strong> If multiple scripts have <code>defer</code>, they execute in the order they appear in the document.</li>
+        <li><strong>Runs After DOM Parsing:</strong> Ensures that the entire HTML document is parsed before executing the script.</li>
+    </ul>
+    <h2>Example:</h2>
+    <pre>
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang="en"&gt;
+        &lt;head&gt;
+            &lt;script src="script1.js" defer&gt;&lt;/script&gt;
+            &lt;script src="script2.js" defer&gt;&lt;/script&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;h1&gt;Hello World&lt;/h1&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;
+    </pre>
+    <h2>Explanation:</h2>
+    <ul>
+        <li><code>script1.js</code> loads and executes before <code>script2.js</code> (even if <code>script2.js</code> loads first).</li>
+        <li>The scripts run <strong>only after</strong> the HTML is fully parsed.</li>
+    </ul>
+    <h2>When to Use?</h2>
+    <p>Use <code>defer</code> when:</p>
+    <ul>
+        <li>The script doesn't need to execute immediately.</li>
+        <li>You need scripts to execute in order.</li>
+        <li>The script interacts with the DOM.</li>
+    </ul>
+</body>
+</details>
+
+---
+
