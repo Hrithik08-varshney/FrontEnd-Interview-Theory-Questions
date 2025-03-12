@@ -1689,8 +1689,30 @@ console.log(result);
         <li>You need scripts to execute in order.</li>
         <li>The script interacts with the DOM.</li>
     </ul>
-</body>
 </details>
 
 ---
 
+44. **What is the use of async keyword in script tag?**
+<details>
+  <summary>Answer</summary>
+<h2>Use of <code>async</code> in Script Tag</h2>
+    <p>The <code>async</code> keyword in the <code>&lt;script&gt;</code> tag is used to load and execute an external JavaScript file asynchronously. It allows the script to download in parallel with HTML parsing and execute as soon as it’s ready, without blocking the rendering of the page.</p>
+    <h3>Example:</h3>
+    <pre>
+        <code>
+        &lt;script async src="script.js"&gt;&lt;/script&gt;
+        </code>
+    </pre>
+    <h3>Behavior:</h3>
+    <ul>
+        <li>The script is fetched in parallel with the HTML parsing.</li>
+        <li>Once downloaded, it executes immediately, possibly before the HTML is fully loaded.</li>
+        <li>It does <strong>not</strong> guarantee execution order if multiple async scripts are present.</li>
+    </ul>
+    <h3>When to Use:</h3>
+    <p>Use <code>async</code> for scripts that don’t depend on other scripts or DOM elements (e.g., analytics, ads, tracking scripts).</p>
+    <p>For scripts that rely on execution order, use <code>defer</code> instead.</p>
+</details>
+
+---
