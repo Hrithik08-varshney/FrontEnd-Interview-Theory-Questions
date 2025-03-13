@@ -1716,3 +1716,24 @@ console.log(result);
 </details>
 
 ---
+
+45. **What are DataTypes in JS?**
+<details>
+  <summary>Answer</summary>
+ <ul>
+            <li><strong>Number:</strong> Represents numeric values. Example: <code>let num = 42;</code></li>
+            <li><strong>String:</strong> Represents text. Example: <code>let str = "Hello";</code></li>
+            <li><strong>Boolean:</strong> Represents <code>true</code> or <code>false</code>. Example: <code>let isActive = true;</code></li>
+            <li><strong>Undefined:</strong> A variable declared but not assigned a value. Example: <code>let x; console.log(x); // undefined</code></li>
+            <li><strong>Null:</strong> Represents an intentional absence of value. Example: <code>let y = null;</code></li>
+            <li><strong>BigInt:</strong> Used for very large integers. Example: <code>let bigNum = 12345678901234567890n;</code></li>
+            <li><strong>Symbol:</strong> Used to create unique identifiers. Example: <code>let sym = Symbol("unique");</code></li>
+        </ul>
+        <h2>Non-Primitive (Reference) Data Type</h2>
+        <ul>
+            <li><strong>Object:</strong> Collection of key-value pairs (includes arrays, functions, and objects). Example: <code>let obj = { name: "John", age: 30 };</code></li>
+        </ul>
+        <p>All primitive types are immutable, whereas objects are mutable and stored by reference.</p>
+</details>
+
+---
