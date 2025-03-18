@@ -1737,3 +1737,22 @@ console.log(result);
 </details>
 
 ---
+
+46. **What is type of a Class?**
+<details>
+  <summary>Answer</summary>
+<p>In JavaScript, a <strong>class</strong> is a special type of function.</p>
+    <h3>Checking the Type of a Class:</h3>
+    <pre><code>
+class MyClass {}
+console.log(typeof MyClass); // "function"
+    </code></pre>
+    <h3>Explanation:</h3>
+    <ul>
+        <li>In JavaScript, <strong>classes are syntactic sugar</strong> over constructor functions.</li>
+        <li>A class itself is a <strong>function</strong>, specifically a constructor function.</li>
+    </ul>
+    <p>Even though classes look different from traditional functions, under the hood, they are still <strong>special functions</strong> in JavaScript.</p>
+</details>
+
+---
