@@ -1756,3 +1756,21 @@ console.log(typeof MyClass); // "function"
 </details>
 
 ---
+
+47. **Why do we use Semantic Tags in HTML?**
+<details>
+  <summary>Answer</summary>
+ <section>
+        <p>Semantic tags in HTML provide meaning to the content, making it easier for both developers and search engines to understand the structure of a webpage.</p>
+    </section>
+    <section>
+        <h2>Benefits of Semantic Tags</h2>
+        <ul>
+            <li><strong>Readability:</strong> Makes code easier to read and understand.</li>
+            <li><strong>SEO:</strong> Helps search engines better index the webpage.</li>
+            <li><strong>Accessibility:</strong> Enhances usability for assistive technologies.</li>
+            <li><strong>Maintainability:</strong> Simplifies code management and updates.</li>
+        </ul>
+</details>
+
+---
