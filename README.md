@@ -1774,3 +1774,22 @@ console.log(typeof MyClass); // "function"
 </details>
 
 ---
+
+48. **What is difference between Div and Span Tag?**
+<details>
+  <summary>Answer</summary>
+ <section>
+  <h3>1. Block vs Inline</h3>
+    <p><strong>&lt;div&gt;</strong> is a <b>block-level</b> element → Takes up the full width and starts on a new line.</p>
+    <p><strong>&lt;span&gt;</strong> is an <b>inline</b> element → Only takes up as much width as its content.</p>
+
+    <h3>2. Usage</h3>
+    <p><strong>&lt;div&gt;</strong> is used for <b>structuring layouts</b> and grouping elements.</p>
+    <p><strong>&lt;span&gt;</strong> is used for <b>styling or modifying specific text</b> within a block.</p>
+
+    <h3>Example:</h3>
+    <div class="div-box">This is a div (block-level element)</div>
+    <p>This is a <span class="span-text">span</span> (inline element inside a paragraph).</p>
+</details>
+
+---
