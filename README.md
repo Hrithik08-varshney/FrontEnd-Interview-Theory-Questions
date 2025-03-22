@@ -1793,3 +1793,28 @@ console.log(typeof MyClass); // "function"
 </details>
 
 ---
+
+49. **What is Specificity in CSS?**
+<details>
+  <summary>Answer</summary>
+ <p>Specificity in CSS determines which rule takes precedence when multiple rules target the same element. It is calculated based on the types of selectors used:</p>
+    <ul>
+        <li><strong>Inline styles</strong> (<code>style</code> attribute) → Highest specificity <code>(1,0,0,0)</code></li>
+        <li><strong>IDs</strong> (<code>#id</code>) → High specificity <code>(0,1,0,0)</code></li>
+        <li><strong>Classes, attributes, and pseudo-classes</strong> (<code>.class</code>, <code>[attr]</code>, <code>:hover</code>) → Medium specificity <code>(0,0,1,0)</code></li>
+        <li><strong>Elements and pseudo-elements</strong> (<code>div</code>, <code>h1</code>, <code>::before</code>) → Low specificity <code>(0,0,0,1)</code></li>
+    </ul>
+    <p>If two selectors have the same specificity, the one that appears later in the CSS file wins.</p>
+    <h3>Example:</h3>
+    <pre>
+    /* Specificity: (0,0,1,0) */
+    .button { color: blue; }  
+    /* Specificity: (0,1,0,0) - Higher priority */
+    #submit { color: red; }  
+    /* Specificity: (1,0,0,0) - Highest priority */
+    </pre>
+    <button class="button" id="submit" style="color: green;">Click Me</button>
+    <p>Here, the button text will be <strong style="color: green;">green</strong> due to the inline style.</p>
+</details>
+
+---
