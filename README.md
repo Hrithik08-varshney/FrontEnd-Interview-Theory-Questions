@@ -1818,3 +1818,36 @@ console.log(typeof MyClass); // "function"
 </details>
 
 ---
+
+50. **What is Hoisting?**
+<details>
+  <summary>Answer</summary>
+  <p>Hoisting is a JavaScript behavior where variable and function declarations are moved to the top of their containing scope during the compilation phase, before the code is executed.</p>
+    <h2>Key Points:</h2>
+    <h3>1. Function Declarations</h3>
+    <p>Function declarations are fully hoisted and can be called before they appear in the code.</p>
+    <code>
+        greet(); // Works fine
+        function greet() {
+            console.log("Hello!");
+        }
+    </code>
+    <h3>2. Var Declarations</h3>
+    <p>Var declarations are hoisted but initialized as <code>undefined</code>, so accessing them before declaration gives <code>undefined</code>.</p>
+    <code>
+        console.log(a); // undefined
+        var a = 10;
+    </code>
+    <h3>3. Let and Const</h3>
+    <p>Let and Const are hoisted but do not get initialized, leading to a <strong>Temporal Dead Zone (TDZ)</strong> until the declaration is encountered.</p>
+    <code>
+        console.log(b); // ReferenceError
+        let b = 20;
+    </code>
+    <h2>Conclusion:</h2>
+    <p>Hoisting allows function and variable declarations to be used before their actual declaration, but <code>var</code> initializes with <code>undefined</code>, while <code>let</code> and <code>const</code> remain in the TDZ.</p>
+</body>
+</html>
+</details>
+
+---
