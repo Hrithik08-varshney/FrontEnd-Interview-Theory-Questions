@@ -1851,3 +1851,49 @@ console.log(typeof MyClass); // "function"
 </details>
 
 ---
+
+51. **How async operation is handled in JS?**
+<details>
+  <summary>Answer</summary>
+  <h3>1. Callbacks (Old Approach)</h3>
+    <p>A function is passed as an argument and executed once the async task is done.</p>
+    <pre><code>
+function fetchData(callback) {
+    setTimeout(() => {
+        callback("Data fetched");
+    }, 1000);
+}
+fetchData((data) => console.log(data)); // Output after 1s: Data fetched
+    </code></pre>
+    <p><strong>Downside:</strong> Leads to callback hell if multiple async operations are nested.</p>
+    <h3>2. Promises (Modern Approach)</h3>
+    <p>A <code>Promise</code> represents a future value. It can be in pending, resolved, or rejected state.</p>
+    <pre>
+    <code>
+function fetchData() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("Data fetched");
+        }, 1000);
+    });
+}
+  fetchData().then((data) => console.log(data)); // Output after 1s: Data fetched
+    </code>
+    </pre>
+    <p><strong>Advantage:</strong> Avoids callback hell using <code>.then()</code> chaining.</p>
+    <h3>3. Async/Await (Recommended)</h3>
+    <p>A cleaner and more readable way to handle async code.</p>
+    <pre><code>
+async function fetchData() {
+    return "Data fetched";
+}
+async function getData() {
+    const data = await fetchData();
+    console.log(data);
+}
+getData(); // Output: Data fetched
+    </code></pre>
+    <p><strong>Advantage:</strong> Reads like synchronous code while being non-blocking.</p>
+</details>
+
+---
