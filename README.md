@@ -1897,3 +1897,31 @@ getData(); // Output: Data fetched
 </details>
 
 ---
+
+52. **What is Higher Order Components?**
+<details>
+  <summary>Answer</summary>
+<p>Higher-Order Components (HOC) in React are functions that take a component as input and return an enhanced component. HOCs allow you to reuse component logic, manage state, and add extra functionalities without modifying the original component.</p>
+    <h2>Example:</h2>
+    <code>
+        const withLogger = (WrappedComponent) => {  
+            return (props) => {  
+                console.log("Rendered with props:", props);  
+                return &lt;WrappedComponent {...props} /&gt;;  
+            };  
+        };  
+        const Button = (props) => &lt;button&gt;{props.label}&lt;/button&gt;;  
+        const EnhancedButton = withLogger(Button);  
+        // Usage  
+        &lt;EnhancedButton label="Click Me" /&gt;;
+    </code>
+    <h2>Key Points:</h2>
+    <ul>
+        <li>HOCs <strong>don’t modify</strong> the original component; they wrap it.</li>
+        <li>They are <strong>pure functions</strong> (they don't affect the original component).</li>
+        <li>Useful for <strong>code reusability</strong> (e.g., authentication checks, logging, theming).</li>
+    </ul>
+    <p>Since React hooks (introduced in v16.8), HOCs are used less frequently, as hooks provide similar functionality in a more readable way.</p>
+</details>
+
+---
