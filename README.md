@@ -1925,3 +1925,30 @@ getData(); // Output: Data fetched
 </details>
 
 ---
+
+53. **What is Prop Drilling?**
+<details>
+  <summary>Answer</summary>
+    <p>Prop Drilling is the process of passing data (props) from a parent component to deeply nested child components, even if some intermediate components don’t need that data. This can make the code harder to manage and maintain.</p>
+    <h3>Example:</h3>
+    <code>
+        const Parent = () => {<br>
+        &nbsp;&nbsp;const message = "Hello from Parent!";<br>
+        &nbsp;&nbsp;return &lt;Child message={message} /&gt;;<br>
+        };<br><br>
+        const Child = ({ message }) => {<br>
+        &nbsp;&nbsp;return &lt;GrandChild message={message} /&gt;;<br>
+        };<br><br>
+        const GrandChild = ({ message }) => {<br>
+        &nbsp;&nbsp;return &lt;p&gt;{message}&lt;/p&gt;;<br>
+        };
+    </code>
+    <h3>Solution:</h3>
+    <p>To avoid prop drilling, you can use:</p>
+    <ul>
+        <li><strong>Context API</strong> (<code>useContext</code>)</li>
+        <li><strong>State Management Libraries</strong> (Redux, Zustand, Jotai, etc.)</li>
+    </ul>
+</details>
+
+---
