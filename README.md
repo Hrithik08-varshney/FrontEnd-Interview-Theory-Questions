@@ -1952,3 +1952,31 @@ getData(); // Output: Data fetched
 </details>
 
 ---
+
+54. **What is Lazy Loading?**
+<details>
+  <summary>Answer</summary>
+ <p>
+        Lazy loading is a technique that delays loading resources (like images, components, or data) until they are needed. 
+        This improves performance by reducing initial load time and saving bandwidth.
+    </p>
+    <h2>Lazy Loading in React</h2>
+    <p>
+        In <strong>React</strong>, lazy loading is often implemented using <code>React.lazy</code> for component-based code splitting:
+    </p>
+    <code>
+        const MyComponent = React.lazy(() => import('./MyComponent'));<br><br>
+        function App() {<br>
+        &nbsp;&nbsp;return (<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;Suspense fallback=&lt;div&gt;Loading...&lt;/div&gt;&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;MyComponent /&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;/Suspense&gt;<br>
+        &nbsp;&nbsp;);<br>
+        }
+    </code>
+    <p>
+        Here, <code>MyComponent</code> is loaded only when it's needed, reducing the initial JavaScript bundle size.
+    </p>
+</details>
+
+---
