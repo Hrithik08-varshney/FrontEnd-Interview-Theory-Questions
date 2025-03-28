@@ -1980,3 +1980,23 @@ getData(); // Output: Data fetched
 </details>
 
 ---
+
+55. **What is Virtual DOM?**
+<details>
+  <summary>Answer</summary>
+ <p>The <strong>Virtual DOM (VDOM)</strong> is a lightweight JavaScript representation of the actual DOM. It helps improve performance by minimizing direct manipulations of the real DOM.</p>
+    <h2>How it Works:</h2>
+    <ol>
+        <li><strong>Render:</strong> React creates a virtual DOM tree based on the UI structure.</li>
+        <li><strong>Diffing:</strong> When state changes, React compares (diffs) the new VDOM with the previous one.</li>
+        <li><strong>Reconciliation:</strong> React updates only the changed parts in the real DOM instead of re-rendering everything.</li>
+    </ol>
+    <h2>Benefits:</h2>
+    <ul>
+        <li>Faster updates by reducing unnecessary DOM operations.</li>
+        <li>Improved performance with efficient UI rendering.</li>
+        <li>Better user experience with smooth updates.</li>
+    </ul>
+</details>
+
+---
