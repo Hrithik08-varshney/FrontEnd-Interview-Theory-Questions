@@ -2000,3 +2000,52 @@ getData(); // Output: Data fetched
 </details>
 
 ---
+
+56. **Difference between Server Side Rendering and Client Side Rendering?**
+<details>
+  <summary>Answer</summary>
+ <table>
+        <tr>
+            <th>Feature</th>
+            <th>Server-Side Rendering (SSR)</th>
+            <th>Client-Side Rendering (CSR)</th>
+        </tr>
+        <tr>
+            <td><strong>Rendering Location</strong></td>
+            <td>On the server before sending to the client</td>
+            <td>On the client (browser) after receiving raw data</td>
+        </tr>
+        <tr>
+            <td><strong>Initial Load Time</strong></td>
+            <td>Faster (pre-rendered HTML sent)</td>
+            <td>Slower (JS needs to load and execute)</td>
+        </tr>
+        <tr>
+            <td><strong>SEO</strong></td>
+            <td>Better (content is available on page load)</td>
+            <td>Worse (content loads dynamically via JS)</td>
+        </tr>
+        <tr>
+            <td><strong>Performance</strong></td>
+            <td>Faster initial load, but slower navigation</td>
+            <td>Slower initial load, but faster navigation after load</td>
+        </tr>
+        <tr>
+            <td><strong>Interactivity</strong></td>
+            <td>Needs hydration to become interactive</td>
+            <td>Directly interactive after JS loads</td>
+        </tr>
+        <tr>
+            <td><strong>Use Case</strong></td>
+            <td>Good for SEO-heavy and content-based sites (e.g., blogs, e-commerce)</td>
+            <td>Good for web apps with dynamic interactions (e.g., dashboards, SPAs)</td>
+        </tr>
+    </table>
+    <h3>Examples:</h3>
+    <ul>
+        <li><strong>SSR:</strong> Next.js (with <code>getServerSideProps</code>)</li>
+        <li><strong>CSR:</strong> React (default), Angular, Vue (without SSR)</li>
+    </ul>
+</details>
+
+---
