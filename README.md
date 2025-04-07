@@ -2049,3 +2049,38 @@ getData(); // Output: Data fetched
 </details>
 
 ---
+
+57. **What is Routing in React?**
+<details>
+  <summary>Answer</summary>
+<p>Routing in React refers to the process of navigating between different components or pages in a React application without reloading the page.</p>
+  <p>It's usually handled by a library like <strong>React Router</strong>.</p>
+  <h2>Key Concepts:</h2>
+  <ul>
+    <li><strong>&lt;BrowserRouter&gt;</strong>: Wraps your app and enables routing.</li>
+    <li><strong>&lt;Routes&gt;</strong>: Contains all your route definitions.</li>
+    <li><strong>&lt;Route&gt;</strong>: Defines a path and the component to render.</li>
+    <li><strong>useNavigate()</strong>: Programmatically navigate to a route.</li>
+    <li><strong>useParams()</strong>: Access route parameters (e.g., /user/:id).</li>
+  </ul>
+  <h2>Example:</h2>
+  <pre>
+<code>
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./Home";
+import About from "./About";
+function App() {
+  return (
+    &lt;BrowserRouter&gt;
+      &lt;Routes&gt;
+        &lt;Route path="/" element={&lt;Home /&gt;} /&gt;
+        &lt;Route path="/about" element={&lt;About /&gt;} /&gt;
+      &lt;/Routes&gt;
+    &lt;/BrowserRouter&gt;
+  );
+}
+</code>
+  </pre>
+</details>
+
+---
