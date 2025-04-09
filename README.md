@@ -2084,3 +2084,40 @@ function App() {
 </details>
 
 ---
+
+58. **What is IIFE in React?**
+<details>
+  <summary>Answer</summary>
+  <p>
+    In React, an <strong>IIFE (Immediately Invoked Function Expression)</strong> is a JavaScript function that runs as soon as it's defined. It's not React-specific but is sometimes used in React code to:
+  </p>
+  <ul>
+    <li>Execute code immediately inside a component.</li>
+    <li>Avoid polluting the main JSX return with complex logic.</li>
+  </ul>
+  <h2>Syntax:</h2>
+  <pre><code>
+(() => {
+  // code here
+})();
+  </code></pre>
+  <h2>Example in React:</h2>
+  <pre><code>
+const MyComponent = () =&gt; {
+  const value = 10;
+  return (
+    &lt;div&gt;
+      {
+        (() =&gt; {
+          if (value &gt; 5) return &lt;p&gt;Value is high&lt;/p&gt;;
+          else return &lt;p&gt;Value is low&lt;/p&gt;;
+        })()
+      }
+    &lt;/div&gt;
+  );
+};
+  </code></pre>
+</details>
+
+---
+
