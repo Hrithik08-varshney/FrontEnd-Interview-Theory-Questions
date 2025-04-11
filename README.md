@@ -2121,3 +2121,23 @@ const MyComponent = () =&gt; {
 
 ---
 
+59. **JS Object can have integer as a key?**
+<details>
+  <summary>Answer</summary>
+ <p>In JavaScript, <strong>object keys are always strings (or symbols)</strong>. Even if you use an integer as a key, JavaScript automatically converts it to a string.</p>
+  <h3>Example:</h3>
+  <pre>
+<code>
+const obj = {
+  1: "one",
+  2: "two"
+};
+console.log(obj);         // { '1': 'one', '2': 'two' }
+console.log(obj[1]);      // 'one'
+console.log(obj["1"]);    // 'one'
+</code>
+  </pre>
+  <p>So yes, you <strong>can</strong> use integers as keys when defining an object, but they will be stored as <strong>string keys</strong>.</p>
+</details>
+
+---
