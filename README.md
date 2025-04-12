@@ -2141,3 +2141,51 @@ console.log(obj["1"]);    // 'one'
 </details>
 
 ---
+
+60. **Unique features of key in object?**
+<details>
+  <summary>Answer</summary>
+<ol>
+    <li>
+      <strong>String or Symbol Only:</strong>  
+      <p>Keys are always either strings or symbols — even if you use a number or boolean, it will be converted to a string.</p>
+      <pre><code>const obj = { 1: "a", true: "b" };
+console.log(Object.keys(obj)); // ["1", "true"]</code></pre>
+    </li>
+    <li>
+      <strong>No Duplicate Keys:</strong>  
+      <p>If you define a key more than once, the last one overrides the previous.</p>
+      <pre><code>const obj = { a: 1, a: 2 };
+console.log(obj.a); // 2</code></pre>
+    </li>
+    <li>
+      <strong>Key Order (Mostly Predictable):</strong>
+      <ul>
+        <li>Integer-like keys come first in ascending order.</li>
+        <li>Other string keys follow in insertion order.</li>
+        <li>Symbol keys maintain their own insertion order.</li>
+      </ul>
+    </li>
+    <li>
+      <strong>Dynamic Key Names:</strong>  
+      <p>You can use computed property names with <code>[]</code>.</p>
+      <pre><code>const key = "name";
+const obj = { [key]: "John" };</code></pre>
+    </li>
+    <li>
+      <strong>Symbols as Unique Keys:</strong>  
+      <p>Symbols create keys that won’t conflict with other string keys.</p>
+      <pre><code>const sym = Symbol("id");
+const obj = { [sym]: 123 };</code></pre>
+    </li>
+    <li>
+      <strong>Not Accessible via Dot Notation (for non-string/safe keys):</strong>  
+      <p>You must use bracket notation for keys with spaces or symbols.</p>
+      <pre><code>const obj = { "full name": "John Doe" };
+console.log(obj["full name"]); // valid</code></pre>
+    </li>
+  </ol>
+</details>
+
+---
+
