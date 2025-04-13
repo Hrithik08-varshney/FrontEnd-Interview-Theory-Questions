@@ -2189,3 +2189,26 @@ console.log(obj["full name"]); // valid</code></pre>
 
 ---
 
+61. **What is useCallback?**
+<details>
+  <summary>Answer</summary>
+ <p><code>useCallback</code> is a React Hook that <strong>memoizes a function</strong>, so it doesn't get recreated on every render unless its dependencies change.</p>
+  <h2>Syntax:</h2>
+  <pre><code>const memoizedFn = useCallback(() =&gt; {
+  // function code
+}, [dependencies]);</code></pre>
+  <h2>Why use it?</h2>
+  <p>To <strong>avoid unnecessary re-renders or re-creations</strong> of functions, especially when passing them to child components or using them in <code>useEffect</code>.</p>
+  <h2>Example:</h2>
+  <pre><code>import { useState, useCallback } from 'react';
+function Counter() {
+  const [count, setCount] = useState(0);
+  const increment = useCallback(() =&gt; {
+    setCount(c =&gt; c + 1);
+  }, []); // `increment` won't be recreated on every render
+  return &lt;button onClick={increment}&gt;Count: {count}&lt;/button&gt;;
+}</code></pre>
+  <p>Without <code>useCallback</code>, <code>increment</code> would be a <strong>new function on every render</strong>, which can cause issues if passed to memoized child components.</p>
+</details>
+
+---
