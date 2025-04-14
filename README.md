@@ -2212,3 +2212,20 @@ function Counter() {
 </details>
 
 ---
+
+62. **What is useMemo?**
+<details>
+  <summary>Answer</summary>
+<p><code>useMemo</code> is a React Hook that <strong>memoizes the result of a computation</strong>, so it's only recalculated when its dependencies change. It helps optimize performance by avoiding unnecessary recalculations.</p>
+  <h3>Syntax:</h3>
+  <pre><code>const memoizedValue = useMemo(() =&gt; computeExpensiveValue(a, b), [a, b]);</code></pre>
+  <h3>Use Case:</h3>
+  <p>When you have a <strong>computationally expensive function</strong> or want to avoid re-running logic unless dependencies change.</p>
+  <h3>Example:</h3>
+  <pre><code>const sortedList = useMemo(() =&gt; {
+  return list.sort((a, b) =&gt; a - b);
+}, [list]);</code></pre>
+  <p>This ensures <code>sortedList</code> is only recalculated when <code>list</code> changes.</p>
+</details>
+
+---
