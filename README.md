@@ -2229,3 +2229,37 @@ function Counter() {
 </details>
 
 ---
+
+63. **What is Pure Components?**
+<details>
+  <summary>Answer</summary>
+<p>In React, <strong>Pure Components</strong> are components that do a shallow comparison of props and state to determine if a re-render is necessary.</p>
+  <h3>Key Points:</h3>
+  <ul>
+    <li>A <strong>PureComponent</strong> only re-renders when props or state actually change.</li>
+    <li>It implements <code>shouldComponentUpdate()</code> with a <strong>shallow</strong> prop and state comparison.</li>
+    <li>Used to optimize performance and avoid unnecessary re-renders.</li>
+  </ul>
+  <h3>Syntax:</h3>
+  <pre><code>
+import React, { PureComponent } from 'react';
+class MyComponent extends PureComponent {
+  render() {
+    return &lt;div&gt;{this.props.name}&lt;/div&gt;;
+  }
+}
+  </code></pre>
+  <h3>Difference from <code>Component</code>:</h3>
+  <ul>
+    <li><code>Component</code> always re-renders by default.</li>
+    <li><code>PureComponent</code> skips re-render if nothing changed (shallow check).</li>
+  </ul>
+  <h3>Note:</h3>
+  <p>Use PureComponent only when:</p>
+  <ul>
+    <li>Props and state are <strong>immutable</strong> or <strong>simple objects</strong>.</li>
+    <li>You want to boost performance in large lists or complex UIs.</li>
+  </ul>
+</details>
+
+---
