@@ -2325,3 +2325,38 @@ const handleClick = useCallback(() =&gt; doSomething(), []);
 </details>
 
 ---
+
+65. **What are Interceptors?**
+<details>
+  <summary>Answer</summary>
+<p><strong>Interceptors</strong> are functions or classes used in many frameworks (like Angular, Axios in JavaScript, etc.) to <strong>intercept and modify HTTP requests or responses</strong> before they are handled by the application or sent to the server.</p>
+  <h3>In simple terms:</h3>
+  <p>They <strong>"catch"</strong> the request or response and let you:</p>
+  <ul>
+    <li>Modify headers</li>
+    <li>Add auth tokens</li>
+    <li>Handle errors globally</li>
+    <li>Log or transform data</li>
+  </ul>
+  <h3>🧠 Example (Axios - JavaScript):</h3>
+  <pre><code>axios.interceptors.request.use((config) =&gt; {
+  config.headers.Authorization = `Bearer token`;
+  return config;
+});
+axios.interceptors.response.use(
+  (response) =&gt; response,
+  (error) =&gt; {
+    // Handle error globally
+    return Promise.reject(error);
+  }
+);</code></pre>
+  <h3>⚙️ Common Use Cases:</h3>
+  <ul>
+    <li>Adding authentication tokens</li>
+    <li>Logging requests/responses</li>
+    <li>Global error handling</li>
+    <li>Showing loaders/spinners</li>
+  </ul>
+</details>
+
+---
