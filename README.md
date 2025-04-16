@@ -2263,3 +2263,65 @@ class MyComponent extends PureComponent {
 </details>
 
 ---
+
+64. **How to improve react application performance?**
+<details>
+  <summary>Answer</summary>
+<h2>🔁 1. Avoid Unnecessary Re-renders</h2>
+  <ul>
+    <li>Use <code>React.memo</code> for functional components.</li>
+    <li>Use <code>PureComponent</code> for class components.</li>
+    <li>Use <code>useMemo</code> and <code>useCallback</code> to memoize expensive computations and functions.</li>
+  </ul>
+  <h2>⚛️ 2. Code Splitting</h2>
+  <ul>
+    <li>Use <code>React.lazy</code> with <code>Suspense</code> for dynamic imports.</li>
+    <li>Implement route-based code splitting with React Router.</li>
+  </ul>
+  <h2>🧹 3. Optimize State Management</h2>
+  <ul>
+    <li>Lift state only when needed.</li>
+    <li>Use local state instead of global where possible.</li>
+    <li>Avoid excessive re-renders from frequent state updates.</li>
+  </ul>
+  <h2>🧮 4. Virtualize Long Lists</h2>
+  <ul>
+    <li>Use <a href="https://react-window.vercel.app/" target="_blank">react-window</a> or <code>react-virtualized</code>.</li>
+    <li>Only render visible items in large lists.</li>
+  </ul>
+  <h2>📦 5. Bundle Optimization</h2>
+  <ul>
+    <li>Use tools like Webpack Bundle Analyzer.</li>
+    <li>Remove unused packages and dead code.</li>
+    <li>Use tree-shakable libraries (ES modules).</li>
+  </ul>
+
+  <h2>🎨 6. Lazy Load Images and Components</h2>
+  <ul>
+    <li>Use libraries like <code>react-lazyload</code> or native <code>&lt;img loading="lazy" /&gt;</code>.</li>
+    <li>Only load components/images when needed.</li>
+  </ul>
+  <h2>🌐 7. Use CDN and Caching</h2>
+  <ul>
+    <li>Host static assets (images, fonts) on a CDN.</li>
+    <li>Enable proper HTTP caching headers.</li>
+  </ul>
+  <h2>⚙️ 8. Use Production Build</h2>
+  <ul>
+    <li>Deploy the <code>npm run build</code> production version for better performance and minification.</li>
+  </ul>
+  <h2>📉 9. Monitor and Profile</h2>
+  <ul>
+    <li>Use React DevTools Profiler.</li>
+    <li>Use Chrome DevTools Performance tab to find bottlenecks.</li>
+  </ul>
+  <h2>🚀 10. Avoid Anonymous Functions in JSX</h2>
+  <pre><code>// bad
+&lt;MyComponent onClick={() =&gt; doSomething()} /&gt;
+// good
+const handleClick = useCallback(() =&gt; doSomething(), []);
+&lt;MyComponent onClick={handleClick} /&gt;
+</code></pre>
+</details>
+
+---
