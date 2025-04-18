@@ -2360,3 +2360,39 @@ axios.interceptors.response.use(
 </details>
 
 ---
+
+66. **What is Tanstack Query?**
+<details>
+  <summary>Answer</summary>
+<p><strong>TanStack Query</strong> (formerly known as React Query) is a powerful data-fetching and state management library for <strong>React</strong>, <strong>Vue</strong>, <strong>Solid</strong>, and <strong>Svelte</strong>. It's mainly used for managing <strong>server state</strong> in frontend apps.</p>
+  <h2>Key Features:</h2>
+  <ul>
+    <li>Fetch, cache, sync, and update server data with ease</li>
+    <li>Automatic caching and background refetching</li>
+    <li>Pagination & infinite queries</li>
+    <li>Mutations (for POST/PUT/DELETE)</li>
+    <li>Query invalidation and refetch control</li>
+    <li>Devtools support</li>
+  </ul>
+  <h2>Common Use Case:</h2>
+  <pre><code>
+import { useQuery } from '@tanstack/react-query';
+const fetchUser = async () => {
+  const res = await fetch('/api/user');
+  return res.json();
+};
+const Component = () => {
+  const { data, isLoading, error } = useQuery({
+    queryKey: ['user'],
+    queryFn: fetchUser,
+  });
+  if (isLoading) return 'Loading...';
+  if (error) return 'Error!';
+  return &lt;div&gt;{data.name}&lt;/div&gt;;
+};
+  </code></pre>
+  <p><strong>In short:</strong> <em>TanStack Query simplifies async data logic</em>, handles loading/error/caching states automatically, and improves UX without writing a lot of boilerplate.</p>
+</details>
+
+---
+
