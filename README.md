@@ -2396,3 +2396,35 @@ const Component = () => {
 
 ---
 
+67. **What is DRY Principle?**
+<details>
+  <summary>Answer</summary>
+ <p><strong>DRY</strong> stands for <strong>"Don't Repeat Yourself"</strong>. It's a software development concept that promotes reducing repetition of code or logic.</p>
+  <h2>Core Idea:</h2>
+  <blockquote>
+    Every piece of knowledge must have a <strong>single, unambiguous, authoritative representation</strong> in the system.
+  </blockquote>
+  <h2>Why use DRY?</h2>
+  <ul>
+    <li>Easier maintenance</li>
+    <li>Less chance of bugs</li>
+    <li>Code is cleaner and more modular</li>
+  </ul>
+  <h2>Example (Bad - violating DRY):</h2>
+  <pre><code>function getUserName(user) {
+  return user.firstName + " " + user.lastName;
+}
+function greetUser(user) {
+  return "Hello, " + user.firstName + " " + user.lastName;
+}</code></pre>
+  <h2>Better (Following DRY):</h2>
+  <pre><code>function getFullName(user) {
+  return user.firstName + " " + user.lastName;
+}
+function greetUser(user) {
+  return "Hello, " + getFullName(user);
+}</code></pre>
+  <p>Let me know if you want examples in a specific language.</p>
+</details>
+
+---
