@@ -2428,3 +2428,33 @@ function greetUser(user) {
 </details>
 
 ---
+
+68. **What is Specificity in CSS?**
+<details>
+  <summary>Answer</summary>
+ <p><strong>Specificity</strong> in CSS is a set of rules that determines which CSS rule is applied when there are conflicting rules targeting the same element.</p>
+  <h2>Specificity Hierarchy (from lowest to highest):</h2>
+  <ol>
+    <li><strong>Inline styles</strong> (e.g., <code>style="..."</code>) – highest priority.</li>
+    <li><strong>IDs</strong> (<code>#id</code>) – more specific than classes.</li>
+    <li><strong>Classes, attributes, and pseudo-classes</strong> (<code>.class</code>, <code>[type="text"]</code>, <code>:hover</code>)</li>
+    <li><strong>Elements and pseudo-elements</strong> (<code>div</code>, <code>h1</code>, <code>::before</code>) – lowest specificity.</li>
+  </ol>
+  <h2>Example:</h2>
+  <pre><code>/* Specificity: 0,0,1,0 */
+div {
+  color: red;
+}
+/* Specificity: 0,0,1,1 */
+div.active {
+  color: blue;
+}
+/* Specificity: 0,1,0,0 */
+#main {
+  color: green;
+}</code></pre>
+  <p>In this case, <code>#main</code> will win due to higher specificity.</p>
+  <p><strong>Note:</strong> More specific rules override less specific ones, regardless of order in the stylesheet (unless <code>!important</code> is used).</p>
+</details>
+
+---
