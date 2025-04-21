@@ -2458,3 +2458,57 @@ div.active {
 </details>
 
 ---
+
+69. **What is Pseudo Classes And Pseudo Elements?**
+<details>
+  <summary>Answer</summary>
+<h2>🔹 Pseudo-Classes (<code>:</code>)</h2>
+  <p>Used to define a <strong>special state</strong> of an element.</p>
+  <h3>Examples:</h3>
+  <pre><code>
+a:hover {
+  color: red;
+}
+li:first-child {
+  font-weight: bold;
+}
+input:focus {
+  border-color: blue;
+}
+  </code></pre>
+  <h3>Common Pseudo-Classes:</h3>
+  <ul>
+    <li><code>:hover</code> – when the mouse is over an element</li>
+    <li><code>:focus</code> – when an element (like input) is focused</li>
+    <li><code>:nth-child(n)</code> – selects the nth child</li>
+    <li><code>:first-child</code> / <code>:last-child</code> – first/last child of a parent</li>
+    <li><code>:checked</code> – when a checkbox/radio is checked</li>
+  </ul>
+  <h2>🔹 Pseudo-Elements (<code>::</code>)</h2>
+  <p>Used to <strong>style specific parts</strong> of an element.</p>
+  <h3>Examples:</h3>
+  <pre><code>
+p::first-line {
+  color: green;
+}
+p::before {
+  content: "Note: ";
+  font-weight: bold;
+}
+  </code></pre>
+  <h3>Common Pseudo-Elements:</h3>
+  <ul>
+    <li><code>::before</code> – insert content before element content</li>
+    <li><code>::after</code> – insert content after element content</li>
+    <li><code>::first-line</code> – style the first line of a block</li>
+    <li><code>::first-letter</code> – style the first letter of text</li>
+  </ul>
+  <p><strong>🧠 Quick Tip:</strong></p>
+  <ul>
+    <li>Use <code>:</code> for states (<em>pseudo-classes</em>)</li>
+    <li>Use <code>::</code> for parts of elements (<em>pseudo-elements</em>)</li>
+    <li>(Older browsers still support <code>:</code> for pseudo-elements too)</li>
+  </ul>
+</details>
+
+---
