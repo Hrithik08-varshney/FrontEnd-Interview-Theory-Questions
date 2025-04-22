@@ -2512,3 +2512,30 @@ p::before {
 </details>
 
 ---
+
+70. **What are different types of hook in React?**
+<details>
+  <summary>Answer</summary>
+<h2>1. Basic Hooks</h2>
+  <ul>
+    <li><code>useState</code> – for state management.</li>
+    <li><code>useEffect</code> – for side effects (e.g., data fetching, subscriptions).</li>
+    <li><code>useContext</code> – to access React context.</li>
+  </ul>
+  <h2>2. Additional Hooks</h2>
+  <ul>
+    <li><code>useReducer</code> – alternative to <code>useState</code>, useful for complex state logic.</li>
+    <li><code>useCallback</code> – memoizes functions to prevent unnecessary re-renders.</li>
+    <li><code>useMemo</code> – memoizes computed values.</li>
+    <li><code>useRef</code> – holds a mutable reference (like accessing DOM or keeping instance variables).</li>
+    <li><code>useImperativeHandle</code> – customizes the instance value exposed when using <code>ref</code>.</li>
+    <li><code>useLayoutEffect</code> – like <code>useEffect</code> but fires synchronously after all DOM mutations.</li>
+    <li><code>useDebugValue</code> – used to display a label for custom hooks in React DevTools.</li>
+  </ul>
+  <h2>3. Custom Hooks</h2>
+  <p>
+    You can create your own hooks to reuse logic across components. Just start the function name with <code>use</code>.
+  </p>
+</details>
+
+---
