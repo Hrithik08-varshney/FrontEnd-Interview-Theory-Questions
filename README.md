@@ -2539,3 +2539,36 @@ p::before {
 </details>
 
 ---
+
+71. **What is Zustand?**
+<details>
+  <summary>Answer</summary>
+<p>
+    Zustand is a <strong>small, fast, and scalable state management library</strong> for React. It's known for being:
+  </p>
+  <ul>
+    <li><strong>Minimal</strong> – around 1KB in size</li>
+    <li><strong>Boilerplate-free</strong> – simpler than Redux</li>
+    <li><strong>Hook-based</strong> – uses custom hooks for state access</li>
+    <li><strong>Global state</strong> – allows sharing state across components without prop drilling</li>
+    <li><strong>Middleware support</strong> – for persistence, logging, etc.</li>
+  </ul>
+  <h2>Example usage:</h2>
+  <pre><code>
+import { create } from 'zustand';
+const useStore = create((set) => ({
+  count: 0,
+  increment: () => set((state) => ({ count: state.count + 1 })),
+}));
+  </code></pre>
+  <h2>Using it in a component:</h2>
+  <pre><code>
+const Component = () => {
+  const { count, increment } = useStore();
+  return &lt;button onClick={increment}&gt;Count: {count}&lt;/button&gt;;
+};
+  </code></pre>
+  <p>Let me know if you want examples with middleware, persistence, or TypeScript.</p>
+</details>
+
+---
