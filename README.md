@@ -1,6 +1,6 @@
 # FrontEnd-Interview-Theory-Questions
 
-2. **Difference between HTML and HTML5?**
+1. **Difference between HTML and HTML5?**
 <details>
   <summary>Answer</summary>
   <table border="1" cellspacing="0" cellpadding="10">
